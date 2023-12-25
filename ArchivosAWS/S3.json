@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::521463962454:user/mwatanabe@auna.pe",
+                    "arn:aws:iam::521463962454:user/oavalos@auna.pe",
+                    "arn:aws:iam::521463962454:user/jcruzatt@auna.pe",
+                    "arn:aws:iam::521463962454:user/csaqui@auna.pe",
+                    "arn:aws:iam::521463962454:user/gtriveno@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:Get*",
+                "s3:List*",
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:PutObjectAcl",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-analytics-s3",
+                "arn:aws:s3:::auna-dlaprd-analytics-s3/*"
+            ]
+        }
+    ]
+}

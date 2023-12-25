@@ -1,0 +1,271 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "pe AUNA Gestion Medica SBX - Download",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::105038922897:user/mdiazf@auna.pe",
+                    "arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+                    "arn:aws:iam::471535047851:user/mcalderons@auna.pe",
+                    "arn:aws:iam::426045962075:user/oleong@auna.pe",
+                    "arn:aws:iam::521463962454:user/jcruzatt@auna.pe",
+                    "arn:aws:iam::521463962454:user/oavalos@auna.pe",
+                    "arn:aws:iam::521463962454:user/csaqui@auna.pe",
+                    "arn:aws:iam::426045962075:user/jtovar@auna.pe",
+                    "arn:aws:iam::426045962075:user/malorg@auna.pe",
+                    "arn:aws:iam::426045962075:user/jpachecoa@auna.pe",
+                    "arn:aws:iam::521463962454:user/mwatanabe@auna.pe",
+                    "arn:aws:iam::138849472586:user/cjimenez@auna.pe",
+                    "AIDARQ5GOYSIVB6XJZUUI",
+                    "arn:aws:iam::521463962454:user/gtriveno@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-raw-s3/structured-data/OLAP/DataMart/AUNBIDTM/*",
+                "arn:aws:s3:::auna-dlaprd-raw-s3/structured-data/OLTP/EnterpriseBI/*"
+            ]
+        },
+        {
+            "Sid": "pe AUNA Gestion Medica SBX ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::105038922897:user/mdiazf@auna.pe",
+                    "arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+                    "arn:aws:iam::426045962075:user/oleong@auna.pe",
+                    "arn:aws:iam::474221951564:role/auna-iam-raw-s3-q-atenciones-readwrite-prd-role",
+                    "arn:aws:iam::138849472586:user/cjimenez@auna.pe",
+                    "AIDARQ5GOYSIVB6XJZUUI",
+                    "arn:aws:iam::138849472586:user/fnopo@auna.pe",
+                    "arn:aws:iam::426045962075:user/jtovar@auna.pe",
+                    "arn:aws:iam::426045962075:user/malorg@auna.pe",
+                    "arn:aws:iam::426045962075:user/jpachecoa@auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-raw-s3"
+        },
+        {
+            "Sid": "AllowPutToSBD",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::623520800438:role/k8sWorker-aunaoncosalud"
+            },
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::auna-dlaprd-raw-s3/structured-data/files/pry-VentasCall-audios-traducidos-tlmk/*",
+            "Condition": {
+                "StringEquals": {
+                    "s3:x-amz-acl": "bucket-owner-full-control"
+                }
+            }
+        },
+        {
+            "Sid": "AllowListToSBD",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::623520800438:role/k8sWorker-aunaoncosalud"
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-raw-s3",
+            "Condition": {
+                "StringLike": {
+                    "s3:prefix": "structured-data/files/pry-VentasCall-audios-traducidos-tlmk/*"
+                }
+            }
+        },
+        {
+            "Sid": "perws",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::105038922897:user/mdiazf@auna.pe",
+                    "arn:aws:iam::545740383705:role/auna-dl-prd-sap_insurance-modelo_sap_insurance-common-role",
+                    "arn:aws:iam::138849472586:user/fnopo@auna.pe",
+                    "arn:aws:iam::138849472586:user/test_athena",
+                    "arn:aws:iam::474221951564:role/auna-iam-raw-s3-q-atenciones-readwrite-prd-role",
+                    "arn:aws:iam::138849472586:user/lhuamanp@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion",
+                "s3:PutObject",
+                "s3:PutObjectAcl",
+                "s3:DeleteObject"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-raw-s3/*"
+        },
+        {
+            "Sid": "pe AUNA GSPG Intelig Comer SBX Download",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::647686659115:user/cavila@auna.pe"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-raw-s3/structured-data/OLTP/EnterpriseBI/Resultados_Detalle/*",
+                "arn:aws:s3:::auna-dlaprd-raw-s3/structured-data/OLTP/EnterpriseBI/Resultados_Cabecera/*",
+                "arn:aws:s3:::auna-dlaprd-raw-s3/structured-data/OLAP/DataMart/AUNBIDTM/*",
+                "arn:aws:s3:::auna-dlaprd-raw-s3/structured-data/OLTP/HIS510/XHISPRD/*",
+                "arn:aws:s3:::auna-dlaprd-raw-s3/structured-data/OLTP/HIS510/XGPCPRD/*"
+            ]
+        },
+        {
+            "Sid": "pe AUNA GSPG Intelig Comer SBX ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::138849472586:user/lhuamanp@auna.pe",
+                    "arn:aws:iam::647686659115:user/cavila@auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-raw-s3"
+        },
+        {
+            "Sid": "list all for users",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::886026132689:user/mtupayachi@auna.pe",
+                    "arn:aws:iam::886026132689:user/gsalazar@auna.pe",
+                    "arn:aws:iam::138849472586:user/fnopo@auna.pe",
+                    "arn:aws:iam::138849472586:user/lhuamanp@auna.pe",
+                    "arn:aws:iam::886026132689:user/lpaytan@auna.pe",
+                    "arn:aws:iam::105038922897:user/jorge.quinones@myevol.biz"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:PutObject",
+                "s3:GetObjectVersion",
+                "s3:RestoreObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-raw-s3",
+                "arn:aws:s3:::auna-dlaprd-raw-s3/*"
+            ]
+        },
+        {
+            "Sid": "AunaAthenaCrossAccount",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::138849472586:user/ruben.rojas@zat.pe",
+                    "arn:aws:iam::138849472586:user/ancel.vasquez@zat.pe",
+                    "arn:aws:iam::138849472586:user/renan.araujo@zat.pe",
+                    "arn:aws:iam::926314748651:user/vcosta@auna.pe",
+                    "arn:aws:iam::138849472586:user/fnopo@auna.pe",
+                    "arn:aws:iam::138849472586:user/test_athena"
+                ]
+            },
+            "Action": [
+                "s3:Get*",
+                "s3:List*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-raw-s3",
+                "arn:aws:s3:::auna-dlaprd-raw-s3/*"
+            ]
+        },
+        {
+            "Sid": "S3 ListBucket BH2",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::474221951564:role/auna-iam-sftp-teamcanalcomercialpe-odin-prd-readwrite-role"
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-raw-s3"
+        },
+        {
+            "Sid": "VerCarpetasRaiz BH2",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::474221951564:role/auna-iam-sftp-teamcanalcomercialpe-odin-prd-readwrite-role"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-raw-s3/*"
+        },
+        {
+            "Sid": "S3 DownloadandUpload BH",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::474221951564:role/auna-iam-sftp-teamcanalcomercialpe-odin-prd-readwrite-role"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion",
+                "s3:PutObject",
+                "s3:PutObjectAcl",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-raw-s3/structured-data/files/ODIN",
+                "arn:aws:s3:::auna-dlaprd-raw-s3/structured-data/files/ODIN/*"
+            ]
+        },
+        {
+            "Sid": "S3 ListBucket BH",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::474221951564:role/auna-iam-sftp-teamcontrolgesfinpe_pandora_prd-readwrite-role"
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-raw-s3"
+        },
+        {
+            "Sid": "VerCarpetasRaiz BH",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::474221951564:role/auna-iam-sftp-teamcontrolgesfinpe_pandora_prd-readwrite-role"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-raw-s3/*"
+        },
+        {
+            "Sid": "S3 DownloadandUpload BH2",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::474221951564:role/auna-iam-sftp-teamcontrolgesfinpe_pandora_prd-readwrite-role"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-raw-s3/structured-data/files/Pandora/*"
+        },
+        {
+            "Sid": "AunaCrossAccount-SandboxBI",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::138849472586:role/AWSGlueServiceRoleS3FullAccess"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-raw-s3",
+                "arn:aws:s3:::auna-dlaprd-raw-s3/structured-data/OLAP/dwh-modelos-dimensional-poblaciones/*"
+            ]
+        }
+    ]
+}

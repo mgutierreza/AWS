@@ -1,0 +1,886 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AunaAthenaCrossAccount",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::521463962454:user/oavalos@auna.pe",
+					"arn:aws:iam::255366181314:root",
+					"arn:aws:iam::138849472586:user/cjimenez@auna.pe",
+					"arn:aws:iam::850417564552:user/jchanta@auna.pe",
+					"arn:aws:iam::422633677643:role/auna-glue-actuarial-tec-execution-sbx-role",
+					"arn:aws:iam::328392380408:user/jmartinezc@auna.pe",
+					"arn:aws:iam::521463962454:user/mwatanabe@auna.pe",
+					"arn:aws:iam::926314748651:user/wprudencio@auna.pe",
+					"arn:aws:iam::328392380408:user/mllerenag@auna.pe",
+					"arn:aws:iam::138849472586:user/fnopo@auna.pe",
+					"arn:aws:iam::521463962454:role/service-role/AWSGlueDataBrewServiceRole-auna-sbx",
+					"arn:aws:iam::926314748651:user/vcosta@auna.pe",
+					"arn:aws:iam::545740383705:root",
+					"arn:aws:iam::422633677643:user/jvasquez@oncosalud.pe",
+					"arn:aws:iam::138849472586:user/crondan@auna.pe",
+					"arn:aws:iam::138849472586:user/econdoricc@auna.pe",
+					"arn:aws:iam::800480532522:user/cvillenac@auna.pe",
+					"arn:aws:iam::422633677643:root",
+					"arn:aws:iam::886026132689:user/cquezada@auna.pe",
+					"arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+					"arn:aws:iam::138849472586:user/jruizvi@auna.pe",
+					"arn:aws:iam::545740383705:user/jdelsolar@auna.pe",
+					"arn:aws:iam::166327684175:role/SoporteItera",
+					"arn:aws:iam::426045962075:user/jtovar@auna.pe",
+					"arn:aws:iam::521463962454:user/csaqui@auna.pe",
+					"arn:aws:iam::288056165677:user/cchau@auna.pe",
+					"arn:aws:iam::415250153014:root",
+					"arn:aws:iam::105038922897:role/service-role/AWSGlueDataBrewServiceRole-DatBrewq",
+					"arn:aws:iam::422633677643:user/ecortez@auna.pe",
+					"arn:aws:iam::521463962454:user/gtriveno@auna.pe",
+					"arn:aws:iam::166327684175:root",
+					"arn:aws:iam::384425546715:root",
+					"arn:aws:iam::422633677643:user/nramos@auna.pe",
+					"arn:aws:iam::521463962454:user/jcruzatt@auna.pe",
+					"arn:aws:iam::138849472586:user/ruben.rojas@zat.pe",
+					"arn:aws:iam::138849472586:root",
+					"arn:aws:iam::850417564552:user/grojas@auna.pe",
+					"arn:aws:iam::105038922897:user/smercado@auna.pe",
+					"arn:aws:iam::647686659115:root",
+					"arn:aws:iam::288056165677:user/sneira@auna.pe",
+					"arn:aws:iam::850417564552:user/kgalvan@auna.pe",
+					"arn:aws:iam::138849472586:user/ancel.vasquez@zat.pe",
+					"arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+					"arn:aws:iam::138849472586:user/pacostaf@auna.pe",
+					"arn:aws:iam::138849472586:user/amacedo@auna.pe",
+					"arn:aws:iam::138849472586:user/lhuamanp@auna.pe",
+					"arn:aws:iam::105038922897:user/lchuquitaipe@auna.pe",
+					"arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+					"arn:aws:iam::886026132689:user/gsalazar@auna.pe",
+					"arn:aws:iam::850417564552:user/apadilla@auna.pe",
+					"arn:aws:iam::545740383705:user/cjimenez@auna.pe",
+					"arn:aws:iam::422633677643:user/cyallico@auna.pe",
+					"arn:aws:iam::521463962454:user/usuariodepruebaglue",
+					"arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX",
+					"arn:aws:iam::886026132689:user/luis@notifai.pe",
+					"arn:aws:iam::138849472586:user/jespinozabad@auna.pe",
+					"arn:aws:iam::368328335599:root",
+					"arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+					"arn:aws:iam::800480532522:user/fmansilla@auna.pe",
+					"arn:aws:iam::138849472586:role/AWSGlueServiceRoleS3FullAccess",
+					"arn:aws:iam::426045962075:user/wprudencio@auna.pe",
+					"arn:aws:iam::288056165677:user/arivasplata@auna.pe",
+					"arn:aws:iam::422633677643:user/langulo@auna.pe",
+					"arn:aws:iam::328392380408:root",
+					"arn:aws:iam::288056165677:user/jbauer@auna.pe",
+					"arn:aws:iam::105038922897:user/lcoaquiraz@auna.pe",
+					"arn:aws:iam::166327684175:user/pportilla@auna.pe",
+					"arn:aws:iam::886026132689:user/lpaytan@auna.pe",
+					"arn:aws:iam::850417564552:user/blegonia@auna.pe",
+					"arn:aws:iam::850417564552:user/dan-test-glue",
+					"arn:aws:iam::138849472586:user/renan.araujo@zat.pe",
+					"arn:aws:iam::800480532522:user/rvalderrama@auna.pe"
+				]
+			},
+			"Action": [
+				"s3:Get*",
+				"s3:List*",
+				"s3:Put*",
+				"s3:GetObject",
+				"s3:PutObject",
+				"s3:PutObjectAcl"
+			],
+			"Resource": [
+				"arn:aws:s3:::auna-dlaprd-analytics-s3",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/*"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::545740383705:role/auna-dl-prd-sapcomisiones-lambda-role",
+					"arn:aws:iam::369037400928:role/auna-dl-q3-hubspot-gestion_portafolio_campana-analytics-role",
+					"arn:aws:iam::545740383705:role/auna-ecs-ecommerce-role"
+				]
+			},
+			"Action": [
+				"s3:ListBucket",
+				"s3:GetObject",
+				"s3:*"
+			],
+			"Resource": [
+				"arn:aws:s3:::auna-dlaprd-analytics-s3",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/SAPComisiones/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/HubSpot/*"
+			]
+		},
+		{
+			"Sid": "pe AUNA Gestion Salud SBX DownloadandUpload",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+					"arn:aws:iam::166327684175:user/silvia.antayhua@tuxpas.com",
+					"arn:aws:iam::166327684175:user/pportilla@auna.pe",
+					"arn:aws:iam::886026132689:user/cquezada@auna.pe",
+					"arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+					"arn:aws:iam::886026132689:user/lpaytan@auna.pe",
+					"arn:aws:iam::166327684175:role/SoporteItera",
+					"arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+					"arn:aws:iam::886026132689:user/gsalazar@auna.pe",
+					"arn:aws:iam::166327684175:user/ncampos@auna.pe",
+                    "arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+					"arn:aws:iam::812159583496:user/vmejia@auna.pe",
+					"arn:aws:iam::812159583496:user/gtavara@auna.pe",
+					"arn:aws:iam::812159583496:user/mramirez@auna.pe",
+					"arn:aws:iam::812159583496:user/acasusol@auna.pe",
+					"arn:aws:iam::812159583496:user/rgallardod@auna.pe",
+					"arn:aws:iam::812159583496:user/aariza@auna.pe",
+                    "arn:aws:iam::867017134770:user/mhuane@auna.pe",
+					"arn:aws:iam::867017134770:user/jenriquez@auna.pe",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamcontrolgesfinpe_pandora_prd-readwrite-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-autodataco-indgerencial-prd-readonly-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamoperaciones_reportes_prd-read-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamcontabilidad_reportes_prd-readwrite-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamconvenios_reportes_prd-read-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-auna-dlaprd-analytics-s3-ReadDowload-prd-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamtecop_reportes_prd-readwrite-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamactuarial_reportes_prd-read-role"                    
+				]
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion"
+			],
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3/*"
+		},
+		{
+			"Sid": "pe AUNA Gestion Salud SBX ListBucket",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+					"arn:aws:iam::166327684175:user/silvia.antayhua@tuxpas.com",
+					"arn:aws:iam::166327684175:user/pportilla@auna.pe",
+					"arn:aws:iam::886026132689:user/cquezada@auna.pe",
+					"arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+					"arn:aws:iam::886026132689:user/lpaytan@auna.pe",
+					"arn:aws:iam::166327684175:role/SoporteItera",
+					"arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+					"arn:aws:iam::886026132689:user/gsalazar@auna.pe",
+					"arn:aws:iam::166327684175:user/ncampos@auna.pe"
+				]
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3"
+		},
+		{
+			"Sid": "pe AUNA Gerencia Dig SBX DownloadandUpload",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::800480532522:root"
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion",
+				"s3:ListBucket"
+			],
+			"Resource": [
+				"arn:aws:s3:::auna-dlaprd-analytics-s3",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/*"
+			]
+		},
+		{
+			"Sid": "pe AUNA Gerencia PRD SBX ListBucket",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+					"arn:aws:iam::812159583496:user/vmejia@auna.pe",
+					"arn:aws:iam::812159583496:user/gtavara@auna.pe",
+					"arn:aws:iam::812159583496:user/mramirez@auna.pe",
+					"arn:aws:iam::812159583496:user/acasusol@auna.pe",
+					"arn:aws:iam::812159583496:user/rgallardod@auna.pe",
+					"arn:aws:iam::812159583496:user/aariza@auna.pe"
+				]
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3"
+		},
+		{
+			"Sid": "pe AUNA BI SBX - Modama Download",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+					"arn:aws:iam::138849472586:user/cjimenez@auna.pe",
+					"arn:aws:iam::812159583496:user/vmejia@auna.pe",
+					"arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+					"arn:aws:iam::812159583496:user/aariza@auna.pe",
+					"arn:aws:iam::166327684175:user/gmondragon@tuxpas.com",
+					"arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+					"arn:aws:iam::647686659115:user/rperezra@externo.auna.pe",
+					"arn:aws:iam::647686659115:user/cavila@auna.pe",
+					"arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+					"arn:aws:iam::138849472586:user/pacostaf@auna.pe",
+					"arn:aws:iam::138849472586:user/amacedo@auna.pe",
+					"arn:aws:iam::800480532522:user/mayulo@auna.pe",
+					"arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+					"arn:aws:iam::886026132689:user/gsalazar@auna.pe",
+					"arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX",
+					"arn:aws:iam::647686659115:user/alatorre@auna.pe",
+					"arn:aws:iam::647686659115:user/rorihuela@externo.auna.pe",
+					"arn:aws:iam::166327684175:user/silvia.antayhua@tuxpas.com",
+					"arn:aws:iam::422633677643:user/jvasquez@oncosalud.pe",
+					"arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+					"arn:aws:iam::886026132689:user/cquezada@auna.pe",
+					"arn:aws:iam::415250153014:user/s3-ecomerce-auna",
+					"arn:aws:iam::800480532522:user/fmansilla@auna.pe",
+					"arn:aws:iam::545740383705:user/jdelsolar@auna.pe",
+					"arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+					"arn:aws:iam::166327684175:user/ncampos@auna.pe",
+					"arn:aws:iam::138849472586:user/kramosr@auna.pe",
+					"arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai",
+					"arn:aws:iam::166327684175:user/pportilla@auna.pe",
+					"arn:aws:iam::886026132689:user/lpaytan@auna.pe",
+					"arn:aws:iam::138849472586:user/david.choqueluque@zat.pe",
+					"arn:aws:iam::812159583496:user/acasusol@auna.pe",
+					"arn:aws:iam::800480532522:user/rvalderrama@auna.pe"
+				]
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion"
+			],
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/Modama/*"
+		},
+		{
+			"Sid": "pe AUNA BI SBX - Modama ListBucket",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+					"arn:aws:iam::138849472586:user/cjimenez@auna.pe",
+					"arn:aws:iam::812159583496:user/vmejia@auna.pe",
+					"arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+					"arn:aws:iam::812159583496:user/aariza@auna.pe",
+					"arn:aws:iam::166327684175:user/gmondragon@tuxpas.com",
+					"arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+					"arn:aws:iam::647686659115:user/rperezra@externo.auna.pe",
+					"arn:aws:iam::647686659115:user/cavila@auna.pe",
+					"arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+					"arn:aws:iam::138849472586:user/pacostaf@auna.pe",
+					"arn:aws:iam::138849472586:user/amacedo@auna.pe",
+					"arn:aws:iam::800480532522:user/mayulo@auna.pe",
+					"arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+					"arn:aws:iam::886026132689:user/gsalazar@auna.pe",
+					"arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX",
+					"arn:aws:iam::647686659115:user/alatorre@auna.pe",
+					"arn:aws:iam::647686659115:user/rorihuela@externo.auna.pe",
+					"arn:aws:iam::166327684175:user/silvia.antayhua@tuxpas.com",
+					"arn:aws:iam::422633677643:user/jvasquez@oncosalud.pe",
+					"arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+					"arn:aws:iam::886026132689:user/cquezada@auna.pe",
+					"arn:aws:iam::800480532522:user/fmansilla@auna.pe",
+					"arn:aws:iam::545740383705:user/jdelsolar@auna.pe",
+					"arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+					"arn:aws:iam::138849472586:user/kramosr@auna.pe",
+					"arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai",
+					"arn:aws:iam::166327684175:user/pportilla@auna.pe",
+					"arn:aws:iam::886026132689:user/lpaytan@auna.pe",
+					"arn:aws:iam::138849472586:user/david.choqueluque@zat.pe",
+					"arn:aws:iam::812159583496:user/acasusol@auna.pe",
+					"arn:aws:iam::800480532522:user/rvalderrama@auna.pe"
+				]
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3"
+		},
+		{
+			"Sid": "pe AUNA BI SBX - Cubo Foundation",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai",
+					"arn:aws:iam::138849472586:user/cjimenez@auna.pe",
+					"arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+					"arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+					"arn:aws:iam::138849472586:user/pacostaf@auna.pe",
+					"arn:aws:iam::138849472586:user/amacedo@auna.pe",
+					"arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+					"arn:aws:iam::138849472586:user/nnaccha@auna.pe",
+					"arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX"
+				]
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion"
+			],
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/bwt/cubo_foundation/*"
+		},
+		{
+			"Sid": "pe AUNA BI SBX - Cubo Foundation ListBucket",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai",
+					"arn:aws:iam::138849472586:user/cjimenez@auna.pe",
+					"arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+					"arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+					"arn:aws:iam::138849472586:user/pacostaf@auna.pe",
+					"arn:aws:iam::138849472586:user/amacedo@auna.pe",
+					"arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+					"arn:aws:iam::138849472586:user/nnaccha@auna.pe",
+					"arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX"
+				]
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3"
+		},
+		{
+			"Sid": "pe AUNA Gestion Medica Siniestros SBX - Download",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+					"arn:aws:iam::426045962075:user/jtovar@auna.pe"
+				]
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion"
+			],
+			"Resource": [
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/bwt/cubo_foundation/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/Modama/*"
+			]
+		},
+		{
+			"Sid": "pe AUNA Gestion Medica Siniestros SBX ListBucket",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+					"arn:aws:iam::426045962075:user/jtovar@auna.pe"
+				]
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3"
+		},
+		{
+			"Sid": "pe AUNA Planeamiento Comercial SBX - Download",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::328392380408:user/aahumada@auna.pe",
+					"arn:aws:iam::328392380408:user/hescriba@auna.pe",
+					"arn:aws:iam::328392380408:user/lmurillo@auna.pe",
+					"arn:aws:iam::328392380408:user/btorres@auna.pe",
+					"arn:aws:iam::328392380408:user/jmartinezc@auna.pe",
+					"arn:aws:iam::328392380408:user/arodriguez@auna.pe",
+					"arn:aws:iam::328392380408:user/lmedina@auna.pe",
+					"arn:aws:iam::328392380408:user/vloureiro@auna.pe",
+					"arn:aws:iam::328392380408:user/rbonifaz@auna.pe",
+					"arn:aws:iam::328392380408:user/catocher@externo.auna.pe",
+					"arn:aws:iam::328392380408:user/lbolanos@auna.pe",
+					"arn:aws:iam::328392380408:user/sgallo@auna.pe",
+					"arn:aws:iam::328392380408:user/azapatav@externo.auna.pe",
+					"arn:aws:iam::328392380408:user/xpena@externo.auna.pe",
+					"arn:aws:iam::328392380408:user/jpuican@auna.pe",
+					"arn:aws:iam::328392380408:user/framirez@auna.pe",
+					"arn:aws:iam::328392380408:user/lrodriguez@auna.pe",
+					"arn:aws:iam::328392380408:user/mgutierrezcu@auna.pe",
+					"arn:aws:iam::328392380408:user/dgrajeda@auna.pe",
+					"arn:aws:iam::328392380408:user/bquispes@auna.pe",
+					"arn:aws:iam::328392380408:user/jllontop@auna.pe",
+					"arn:aws:iam::328392380408:user/cegoavil@auna.pe",
+					"arn:aws:iam::328392380408:user/ccatacora@auna.pe",
+					"arn:aws:iam::328392380408:user/hsalcedo@auna.pe"
+				]
+			},
+			"Action": [
+				"s3:Get*",
+				"s3:Put*",
+				"s3:List*",
+				"s3:GetObjectVersion"
+			],
+			"Resource": [
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/Modama/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/*"
+			]
+		},
+		{
+			"Sid": "pe AUNA Planeamiento Comercial SBX ListBucket",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::328392380408:user/lmurillo@auna.pe",
+					"arn:aws:iam::328392380408:user/btorres@auna.pe",
+					"arn:aws:iam::328392380408:user/arodriguez@auna.pe",
+					"arn:aws:iam::328392380408:user/lmedina@auna.pe",
+					"arn:aws:iam::328392380408:user/vloureiro@auna.pe",
+					"arn:aws:iam::328392380408:user/rbonifaz@auna.pe",
+					"arn:aws:iam::328392380408:user/lbolanos@auna.pe",
+					"arn:aws:iam::328392380408:user/sgallo@auna.pe",
+					"arn:aws:iam::328392380408:user/xpena@externo.auna.pe",
+					"arn:aws:iam::328392380408:user/jpuican@auna.pe",
+					"arn:aws:iam::328392380408:user/lrodriguez@auna.pe",
+					"arn:aws:iam::328392380408:user/dgrajeda@auna.pe",
+					"arn:aws:iam::328392380408:user/jllontop@auna.pe",
+					"arn:aws:iam::328392380408:user/cegoavil@auna.pe",
+					"arn:aws:iam::328392380408:user/ccatacora@auna.pe",
+					"arn:aws:iam::328392380408:user/hsalcedo@auna.pe"
+				]
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3"
+		},
+		{
+			"Sid": "pe AUNA GSPG Intelig Comer SBX Download",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::647686659115:user/cavila@auna.pe",
+					"arn:aws:iam::647686659115:user/alatorre@auna.pe"
+				]
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion"
+			],
+			"Resource": [
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/SAPComisiones/ventas/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/SAPComisiones/bajas/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/SAPComisiones/compensaciones/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/bwt/cubo_foundation/costos_fijos/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/SAPInsurance/SAC/AtencionAlCliente/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/Modama/*"
+			]
+		},
+		{
+			"Sid": "pe AUNA GSPG Intelig Comer SBX ListBucket",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::647686659115:user/cavila@auna.pe",
+					"arn:aws:iam::647686659115:user/alatorre@auna.pe"
+				]
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3"
+		},
+		{
+			"Sid": "dwh-Modelos-Operacional-Poblaciones",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::812159583496:user/vmejia@auna.pe",
+					"arn:aws:iam::328392380408:user/jmartinezc@auna.pe",
+					"arn:aws:iam::328392380408:user/mreategui@zat.pe",
+					"arn:aws:iam::328392380408:user/vloureiro@auna.pe",
+					"arn:aws:sts::812159583496:assumed-role/SoporteItera/jeremy.villanueva@iteraprocess.com",
+					"arn:aws:iam::812159583496:user/mramirez@auna.pe",
+					"arn:aws:iam::328392380408:user/xpena@externo.auna.pe",
+					"arn:aws:iam::328392380408:user/rguarnizo@auna.pe",
+					"arn:aws:iam::328392380408:user/bquispes@auna.pe",
+					"arn:aws:iam::328392380408:user/ccatacora@auna.pe",
+					"arn:aws:iam::545740383705:user/test-permisos",
+					"arn:aws:iam::328392380408:user/aahumada@auna.pe",
+					"arn:aws:iam::422633677643:user/jvasquez@oncosalud.pe",
+					"arn:aws:iam::886026132689:user/cquezada@auna.pe",
+					"arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+					"arn:aws:iam::545740383705:user/jdelsolar@auna.pe",
+					"arn:aws:iam::426045962075:user/jtovar@auna.pe",
+					"arn:aws:iam::166327684175:user/ncampos@auna.pe",
+					"arn:aws:iam::328392380408:user/lbolanos@auna.pe",
+					"arn:aws:iam::328392380408:user/azapatav@externo.auna.pe",
+					"arn:aws:iam::328392380408:user/jpuican@auna.pe",
+					"arn:aws:iam::328392380408:user/rvargasl@auna.pe",
+					"arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+					"arn:aws:iam::328392380408:user/odelaguila@zat.pe",
+					"arn:aws:iam::812159583496:user/aariza@auna.pe",
+					"arn:aws:iam::328392380408:user/aaquise@auna.pe",
+					"arn:aws:iam::812159583496:user/rgallardod@auna.pe",
+					"arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+					"arn:aws:iam::328392380408:user/khinojosa@auna.pe",
+					"arn:aws:iam::328392380408:user/framirez@auna.pe",
+					"arn:aws:iam::800480532522:user/mayulo@auna.pe",
+					"arn:aws:iam::328392380408:user/larellanoc@auna.pe",
+					"arn:aws:iam::328392380408:user/dgrajeda@auna.pe",
+					"arn:aws:iam::886026132689:user/gsalazar@auna.pe",
+					"arn:aws:iam::328392380408:user/dmontenegro@auna.pe",
+					"arn:aws:iam::328392380408:user/samayas@auna.pe",
+					"arn:aws:iam::328392380408:user/hescriba@auna.pe",
+					"arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+					"arn:aws:iam::800480532522:user/fmansilla@auna.pe",
+					"arn:aws:iam::328392380408:user/lmurillo@auna.pe",
+					"arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+					"arn:aws:iam::812159583496:user/gtavara@auna.pe",
+					"arn:aws:iam::328392380408:user/catocher@externo.auna.pe",
+					"arn:aws:iam::138849472586:user/kramosr@auna.pe",
+					"arn:aws:iam::138849472586:user/winy.mosqueda@zat.pe",
+					"arn:aws:iam::166327684175:user/pportilla@auna.pe",
+					"arn:aws:iam::328392380408:user/mgutierrezcu@auna.pe",
+					"arn:aws:iam::138849472586:user/sosorio@auna.pe",
+					"arn:aws:iam::138849472586:user/nnaccha@auna.pe",
+					"arn:aws:iam::138849472586:user/david.choqueluque@zat.pe",
+					"arn:aws:iam::812159583496:user/acasusol@auna.pe",
+					"arn:aws:iam::800480532522:user/rvalderrama@auna.pe"
+				]
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion"
+			],
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Operacional-Poblaciones/pry-mop-Poblacion-Oncosalud/*"
+		},
+		{
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::545740383705:user/renan.araujo@zat.pe"
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion"
+			],
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Operacional-Poblaciones/*"
+		},
+		{
+			"Sid": "dwh-Modelos-Operacional-Poblaciones ListBucket",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::812159583496:user/vmejia@auna.pe",
+					"arn:aws:iam::328392380408:user/mreategui@zat.pe",
+					"arn:aws:iam::328392380408:user/vloureiro@auna.pe",
+					"arn:aws:sts::812159583496:assumed-role/SoporteItera/jeremy.villanueva@iteraprocess.com",
+					"arn:aws:iam::812159583496:user/mramirez@auna.pe",
+					"arn:aws:iam::545740383705:user/renan.araujo@zat.pe",
+					"arn:aws:iam::422633677643:user/amerinol@auna.pe",
+					"arn:aws:iam::328392380408:user/xpena@externo.auna.pe",
+					"arn:aws:iam::422633677643:user/ctorero@auna.pe",
+					"arn:aws:iam::328392380408:user/rguarnizo@auna.pe",
+					"arn:aws:iam::328392380408:user/lrodriguez@auna.pe",
+					"arn:aws:iam::328392380408:user/ccatacora@auna.pe",
+					"arn:aws:iam::545740383705:user/test-permisos",
+					"arn:aws:iam::422633677643:user/cgarrom@auna.pe",
+					"arn:aws:iam::166327684175:user/silvia.antayhua@tuxpas.com",
+					"arn:aws:iam::422633677643:user/jvasquez@oncosalud.pe",
+					"arn:aws:iam::886026132689:user/cquezada@auna.pe",
+					"arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+					"arn:aws:iam::545740383705:user/jdelsolar@auna.pe",
+					"arn:aws:iam::426045962075:user/jtovar@auna.pe",
+					"arn:aws:iam::166327684175:user/ncampos@auna.pe",
+					"arn:aws:iam::328392380408:user/lbolanos@auna.pe",
+					"arn:aws:iam::422633677643:user/arojash@auna.pe",
+					"arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai",
+					"arn:aws:iam::328392380408:user/jpuican@auna.pe",
+					"arn:aws:iam::328392380408:user/rvargasl@auna.pe",
+					"arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+					"arn:aws:iam::422633677643:user/bjaramillor@auna.pe",
+					"arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+					"arn:aws:iam::328392380408:user/arodriguez@auna.pe",
+					"arn:aws:iam::328392380408:user/odelaguila@zat.pe",
+					"arn:aws:iam::812159583496:user/aariza@auna.pe",
+					"arn:aws:iam::328392380408:user/aaquise@auna.pe",
+					"arn:aws:iam::812159583496:user/rgallardod@auna.pe",
+					"arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+					"arn:aws:iam::328392380408:user/khinojosa@auna.pe",
+					"arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+					"arn:aws:iam::800480532522:user/mayulo@auna.pe",
+					"arn:aws:iam::328392380408:user/larellanoc@auna.pe",
+					"arn:aws:iam::328392380408:user/dgrajeda@auna.pe",
+					"arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+					"arn:aws:iam::328392380408:user/cegoavil@auna.pe",
+					"arn:aws:iam::886026132689:user/gsalazar@auna.pe",
+					"arn:aws:iam::422633677643:user/pchunga@auna.pe",
+					"arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX",
+					"arn:aws:iam::422633677643:user/aalvino@auna.pe",
+					"arn:aws:iam::328392380408:user/dmontenegro@auna.pe",
+					"arn:aws:iam::328392380408:user/samayas@auna.pe",
+					"arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+					"arn:aws:iam::800480532522:user/fmansilla@auna.pe",
+					"arn:aws:iam::328392380408:user/lmurillo@auna.pe",
+					"arn:aws:iam::328392380408:user/lmedina@auna.pe",
+					"arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+					"arn:aws:iam::812159583496:user/gtavara@auna.pe",
+					"arn:aws:iam::138849472586:user/kramosr@auna.pe",
+					"arn:aws:iam::138849472586:user/winy.mosqueda@zat.pe",
+					"arn:aws:iam::166327684175:user/pportilla@auna.pe",
+					"arn:aws:iam::138849472586:user/sosorio@auna.pe",
+					"arn:aws:iam::138849472586:user/nnaccha@auna.pe",
+					"arn:aws:iam::138849472586:user/david.choqueluque@zat.pe",
+					"arn:aws:iam::812159583496:user/acasusol@auna.pe",
+					"arn:aws:iam::800480532522:user/rvalderrama@auna.pe"
+				]
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3"
+		},
+		{
+			"Sid": "pe AUNA Gestion Medica Siniestros SBX - Siniestro",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+					"arn:aws:iam::166327684175:user/dmatos@tuxpas.com",
+					"arn:aws:iam::812159583496:user/vmejia@auna.pe",
+					"arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+					"arn:aws:iam::328392380408:user/jmartinezc@auna.pe",
+					"arn:aws:iam::328392380408:user/mreategui@zat.pe",
+					"arn:aws:iam::812159583496:user/mramirez@auna.pe",
+					"arn:aws:iam::812159583496:user/aariza@auna.pe",
+					"arn:aws:iam::328392380408:user/aaquise@auna.pe",
+					"arn:aws:iam::812159583496:user/rgallardod@auna.pe",
+					"arn:aws:iam::166327684175:user/gmondragon@tuxpas.com",
+					"arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+					"arn:aws:iam::647686659115:user/cavila@auna.pe",
+					"arn:aws:iam::328392380408:user/khinojosa@auna.pe",
+					"arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+					"arn:aws:iam::138849472586:user/pacostaf@auna.pe",
+					"arn:aws:iam::138849472586:user/amacedo@auna.pe",
+					"arn:aws:iam::328392380408:user/framirez@auna.pe",
+					"arn:aws:iam::328392380408:user/rguarnizo@auna.pe",
+					"arn:aws:iam::328392380408:user/larellanoc@auna.pe",
+					"arn:aws:iam::328392380408:user/bquispes@auna.pe",
+					"arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+					"arn:aws:iam::886026132689:user/gsalazar@auna.pe",
+					"arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX",
+					"arn:aws:iam::647686659115:user/alatorre@auna.pe",
+					"arn:aws:iam::328392380408:user/dmontenegro@auna.pe",
+					"arn:aws:iam::328392380408:user/aahumada@auna.pe",
+					"arn:aws:iam::166327684175:user/silvia.antayhua@tuxpas.com",
+					"arn:aws:iam::328392380408:user/samayas@auna.pe",
+					"arn:aws:iam::422633677643:user/jvasquez@oncosalud.pe",
+					"arn:aws:iam::328392380408:user/hescriba@auna.pe",
+					"arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+					"arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+					"arn:aws:iam::886026132689:user/cquezada@auna.pe",
+					"arn:aws:iam::545740383705:user/jdelsolar@auna.pe",
+					"arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+					"arn:aws:iam::812159583496:user/gtavara@auna.pe",
+					"arn:aws:iam::328392380408:user/catocher@externo.auna.pe",
+					"arn:aws:iam::426045962075:user/jtovar@auna.pe",
+					"arn:aws:iam::166327684175:user/ncampos@auna.pe",
+					"arn:aws:iam::328392380408:user/azapatav@externo.auna.pe",
+					"arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai",
+					"arn:aws:iam::166327684175:user/pportilla@auna.pe",
+					"arn:aws:iam::886026132689:user/lpaytan@auna.pe",
+					"arn:aws:iam::328392380408:user/mgutierrezcu@auna.pe",
+					"arn:aws:iam::812159583496:user/acasusol@auna.pe",
+					"arn:aws:iam::328392380408:user/rvargasl@auna.pe"
+				]
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion"
+			],
+			"Resource": [
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Operacional-Poblaciones/pry-mop-FarmAuna/operaciones-farmauna/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Operacional-Poblaciones/pry-mop-AppAuna/appauna-paciente-digital/*"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::867017134770:user/mhuane@auna.pe",
+					"arn:aws:iam::867017134770:user/jenriquez@auna.pe"
+				]
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3"
+		},
+		{
+			"Sid": "pe auna people analitycs sbx R-044003 ListBucket",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::288056165677:user/sneira@auna.pe",
+					"arn:aws:iam::288056165677:user/jbauer@auna.pe",
+					"arn:aws:iam::288056165677:user/cchau@auna.pe",
+					"arn:aws:iam::288056165677:user/chidalgo@auna.pe",
+					"arn:aws:iam::288056165677:user/mcaycho@auna.pe",
+					"arn:aws:iam::288056165677:user/arivasplata@auna.pe",
+					"arn:aws:iam::288056165677:user/nchumacero@auna.pe"
+				]
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3"
+		},
+		{
+			"Sid": "pe auna gestion clientes sbx R-044003 View",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::288056165677:user/sneira@auna.pe",
+					"arn:aws:iam::288056165677:user/jbauer@auna.pe",
+					"arn:aws:iam::288056165677:user/cchau@auna.pe",
+					"arn:aws:iam::288056165677:user/chidalgo@auna.pe",
+					"arn:aws:iam::328392380408:user/lmedina@auna.pe",
+					"arn:aws:iam::288056165677:user/mcaycho@auna.pe",
+					"arn:aws:iam::288056165677:user/arivasplata@auna.pe",
+					"arn:aws:iam::288056165677:user/nchumacero@auna.pe"
+				]
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion"
+			],
+			"Resource": [
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/bwt/cubo_foundation/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Operacional-Poblaciones/pry-mop-Poblacion-Oncosalud/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Operacional-Poblaciones/pry-mop-AunaCuentaCorriente/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Operacional-Poblaciones/pry-mop-FarmAuna/operaciones-farmauna/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Operacional-Poblaciones/pry-mop-AppAuna/appauna-paciente-digital/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Reportes/pry-mrep-negocio-prestacional/descriptivo_clientes_red_auna/*"
+			]
+		},
+		{
+			"Sid": "AunaCrossAccount-tk-R-044050",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::138849472586:user/winy.mosqueda@zat.pe"
+			},
+			"Action": [
+				"s3:Get*",
+				"s3:List*"
+			],
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Variables_Analiticas/pry-mva-segmentos/*"
+		},
+		{
+			"Sid": "tk-R-044050",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::138849472586:user/winy.mosqueda@zat.pe"
+			},
+			"Action": [
+				"s3:Get*",
+				"s3:List*",
+				"s3:Put*"
+			],
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Variables_Analiticas/pry-mva-segmentos/*"
+		},
+		{
+			"Sid": "ExampleStmt1",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::138849472586:root"
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:PutObject"
+			],
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Variables_Analiticas/pry-mva-segmentos/*"
+		},
+		{
+			"Sid": "AunaCrossAccount-tk-R-044050 editar",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::138849472586:role/AWSGlueServiceRoleS3FullAccess"
+			},
+			"Action": [
+				"s3:Get*",
+				"s3:List*",
+				"s3:Delete*",
+				"s3:Put*"
+			],
+			"Resource": [
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Variables_Analiticas/pry-mva-segmentos/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-modelos-variables-mercado/pry-mvm-competencia-salud/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-modelos-variables-mercado/pry-mvm-contactabilidad/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Operacional-Poblaciones/pry-mop-gestion-salud/*"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::138849472586:role/AWSGlueServiceRoleS3FullAccess",
+					"arn:aws:iam::138849472586:role/auna-s3-consolidado-bi-prd-auna-dlaprd-analytics-s3-read-role"
+				]
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3"
+		},
+		{
+			"Sid": "R-046772",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::138849472586:role/auna-s3-consolidado-bi-prd-auna-dlaprd-analytics-s3-read-role"
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion"
+			],
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-modelos-variables-mercado/pry-mvm-competencia-salud/*"
+		},
+		{
+			"Sid": "S3 ListBucket BH",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamcontrolgesfinpe_pandora_prd-readwrite-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-autodataco-indgerencial-prd-readonly-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamoperaciones_reportes_prd-read-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamcontabilidad_reportes_prd-readwrite-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamconvenios_reportes_prd-read-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-auna-dlaprd-analytics-s3-ReadDowload-prd-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamtecop_reportes_prd-readwrite-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamactuarial_reportes_prd-read-role"
+				]
+			},
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::auna-dlaprd-analytics-s3"
+		},
+		{
+			"Sid": "S3DownloadandUploadBH",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamcontrolgesfinpe_pandora_prd-readwrite-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-autodataco-indgerencial-prd-readonly-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamoperaciones_reportes_prd-read-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamcontabilidad_reportes_prd-readwrite-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamconvenios_reportes_prd-read-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-auna-dlaprd-analytics-s3-ReadDowload-prd-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamtecop_reportes_prd-readwrite-role",
+					"arn:aws:iam::474221951564:role/auna-iam-sftp-teamactuarial_reportes_prd-read-role"
+				]
+			},
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion"
+			],
+			"Resource": [
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/bwt/cubo_foundation/bwt_ind_regionales_ing/",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/bwt/cubo_foundation/bwt_ind_regionales_ing/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/bwt/Pandora/",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/bwt/Pandora/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/bwt/CierreMes/",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/bwt/CierreMes/*",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/dwh-Modelos-Operacional-Poblaciones/pry-mop-Poblacion-Oncosalud/poblacion-foto/config/*"
+			]
+		},
+		{
+			"Sid": "pe AUNA BI SBX - auna-dlaprd-analytics-s3",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::521463962454:user/oavalos@auna.pe",
+					"arn:aws:iam::521463962454:user/jcruzatt@auna.pe",
+					"arn:aws:iam::138849472586:user/crondan@auna.pe",
+					"arn:aws:iam::521463962454:user/mwatanabe@auna.pe",
+					"arn:aws:iam::328392380408:user/rdelacruz@externo.auna.pe",
+					"arn:aws:iam::138849472586:user/fnopo@auna.pe",
+					"arn:aws:iam::521463962454:user/gtriveno@auna.pe",
+					"arn:aws:iam::521463962454:user/csaqui@auna.pe"
+				]
+			},
+			"Action": "s3:*",
+			"Resource": [
+				"arn:aws:s3:::auna-dlaprd-analytics-s3",
+				"arn:aws:s3:::auna-dlaprd-analytics-s3/structured-data/OLAP/*"
+			]
+		}
+	]
+}

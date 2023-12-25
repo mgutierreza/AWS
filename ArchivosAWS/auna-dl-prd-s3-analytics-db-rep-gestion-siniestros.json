@@ -1,0 +1,1233 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::138849472586:user/ancel.vasquez@zat.pe",
+                    "arn:aws:iam::138849472586:user/jruizvi@auna.pe",
+                    "arn:aws:iam::647686659115:user/rperez@externo.auna.pe",
+                    "arn:aws:iam::647686659115:user/alatorre@auna.pe",
+                    "arn:aws:iam::138849472586:user/fnopo@auna.pe",
+                    "arn:aws:iam::138849472586:user/ruben.rojas@zat.pe",
+                    "arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+                    "arn:aws:iam::647686659115:user/rorihuela@externo.auna.pe",
+                    "arn:aws:iam::521463962454:user/oavalos@auna.pe",
+                    "arn:aws:iam::521463962454:user/mwatanabe@auna.pe",
+                    "arn:aws:iam::647686659115:user/cavila@auna.pe",
+                    "arn:aws:iam::138849472586:user/renan.araujo@zat.pe",
+                    "arn:aws:iam::521463962454:user/gtriveno@auna.pe",
+                    "arn:aws:iam::886026132689:user/test",
+                    "arn:aws:iam::138849472586:role/AWSGlueServiceRoleS3FullAccess",
+                    "arn:aws:iam::138849472586:user/econdoricc@auna.pe",
+                    "arn:aws:iam::886026132689:user/gsalazar@auna.pe",
+                    "arn:aws:iam::138849472586:user/test",
+                    "arn:aws:iam::647686659115:user/rperezra@externo.auna.pe",
+                    "arn:aws:iam::926314748651:user/vcosta@auna.pe",
+                    "arn:aws:sts::521463962454:assumed-role/AWSGlueDataBrewServiceRole-auna-sbx/DataBrewAccessTestSession",
+                    "arn:aws:iam::521463962454:user/jcruzatt@auna.pe",
+                    "arn:aws:iam::886026132689:user/jrojase@auna.pe",
+                    "arn:aws:sts::105038922897:assumed-role/AWSGlueDataBrewServiceRole-DatBrewq/DataBrewAccessTestSession",
+                    "arn:aws:iam::886026132689:user/luis@notifai.pe"
+                ]
+            },
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/*",
+                "arn:aws:glue:us-east-1:545740383705:table/*/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-hubspot-db",
+                "arn:aws:glue:us-east-1:545740383705:table/*/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-glue-dl-analytics-hubspot-db-prd": "DataLakeBIPRDHubspot"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-modelo-declaracion_jurada_salud-db",
+                "arn:aws:glue:us-east-1:545740383705:table/*/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-glue-dl-analytics-modelo-dj-salud-db-prd": "DataLakeBIPRDDJSalud"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-sap_bw-stage-db",
+                "arn:aws:glue:us-east-1:545740383705:table/*/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-glue-bi-prd-dl-prd": "DataLakeBIPRDSapBWStage"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::328392380408:user/dgrajeda@auna.pe",
+                    "arn:aws:iam::328392380408:user/kaguilarp@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/rbonifaz@auna.pe",
+                    "arn:aws:iam::328392380408:user/danny.mendoza@zat.pe",
+                    "arn:aws:iam::328392380408:user/jllontop@auna.pe",
+                    "arn:aws:iam::328392380408:user/sandra.kana@zat.pe",
+                    "arn:aws:iam::328392380408:user/khinojosa@auna.pe",
+                    "arn:aws:iam::471535047851:user/cromeroq@auna.pe",
+                    "arn:aws:iam::328392380408:user/aahumada@auna.pe",
+                    "arn:aws:iam::422633677643:user/arojash@auna.pe",
+                    "arn:aws:iam::422633677643:user/cyallico@auna.pe",
+                    "arn:aws:iam::422633677643:user/langulo@auna.pe",
+                    "arn:aws:iam::328392380408:user/mllerenag@auna.pe",
+                    "arn:aws:iam::288056165677:user/chidalgo@auna.pe",
+                    "arn:aws:iam::288056165677:user/mcaycho@auna.pe",
+                    "arn:aws:iam::328392380408:user/larellanoc@auna.pe",
+                    "arn:aws:iam::471535047851:user/avalencia@auna.pe",
+                    "arn:aws:iam::328392380408:user/jpuican@auna.pe",
+                    "arn:aws:iam::166327684175:user/ncampos@auna.pe",
+                    "arn:aws:iam::471535047851:user/cleonh@auna.pe",
+                    "arn:aws:iam::812159583496:user/rgallardod@auna.pe",
+                    "arn:aws:iam::288056165677:user/cchau@auna.pe",
+                    "arn:aws:iam::328392380408:user/ojuarez@auna.pe",
+                    "arn:aws:iam::471535047851:user/jtavarac@auna.pe",
+                    "arn:aws:iam::328392380408:user/jmartinezc@auna.pe",
+                    "arn:aws:iam::422633677643:user/ctorero@auna.pe",
+                    "arn:aws:iam::812159583496:user/vmejia@auna.pe",
+                    "arn:aws:iam::422633677643:user/nramos@auna.pe",
+                    "arn:aws:iam::328392380408:user/ccatacora@auna.pe",
+                    "arn:aws:iam::328392380408:user/rvargasl@auna.pe",
+                    "arn:aws:iam::328392380408:user/odelaguila@zat.pe",
+                    "arn:aws:iam::328392380408:user/ecarrillo@auna.pe",
+                    "arn:aws:iam::328392380408:user/dkuriyama@auna.pe",
+                    "arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+                    "arn:aws:iam::426045962075:user/jtovar@auna.pe",
+                    "arn:aws:iam::422633677643:user/cgarrom@auna.pe",
+                    "arn:aws:iam::471535047851:user/bflorian@auna.pe",
+                    "arn:aws:iam::288056165677:user/nchumacero@auna.pe",
+                    "arn:aws:iam::471535047851:user/jlanchipa@auna.pe",
+                    "arn:aws:iam::328392380408:user/azapatav@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/lbolanos@auna.pe",
+                    "arn:aws:iam::812159583496:user/gtavara@auna.pe",
+                    "arn:aws:iam::328392380408:user/bquispes@auna.pe",
+                    "arn:aws:iam::328392380408:user/lmurillo@auna.pe",
+                    "arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+                    "arn:aws:iam::328392380408:user/hescriba@auna.pe",
+                    "arn:aws:iam::166327684175:user/pportilla@auna.pe",
+                    "arn:aws:iam::471535047851:user/wesquerre@auna.pe",
+                    "arn:aws:iam::422633677643:user/ecortez@auna.pe",
+                    "arn:aws:iam::288056165677:user/jbauer@auna.pe",
+                    "arn:aws:iam::422633677643:user/aalvino@auna.pe",
+                    "arn:aws:iam::471535047851:user/wnarcizo@auna.pe",
+                    "arn:aws:iam::328392380408:user/mreategui@zat.pe",
+                    "arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+                    "arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+                    "arn:aws:iam::328392380408:user/xpena@externo.auna.pe",
+                    "arn:aws:iam::471535047851:user/tvalladares@auna.pe",
+                    "arn:aws:iam::471535047851:user/anarro@auna.pe",
+                    "arn:aws:iam::328392380408:user/vloureiro@auna.pe",
+                    "arn:aws:iam::471535047851:user/llopez@auna.pe",
+                    "arn:aws:iam::328392380408:user/btorres@auna.pe",
+                    "arn:aws:iam::328392380408:user/dserpa@auna.pe",
+                    "arn:aws:iam::471535047851:user/gfloresa@auna.pe",
+                    "arn:aws:iam::422633677643:user/pchunga@auna.pe",
+                    "arn:aws:iam::422633677643:user/amerinol@auna.pe",
+                    "arn:aws:iam::812159583496:user/acasusol@auna.pe",
+                    "arn:aws:iam::328392380408:user/framirez@auna.pe",
+                    "arn:aws:iam::471535047851:user/mgarnique@auna.pe",
+                    "arn:aws:iam::328392380408:user/cegoavil@auna.pe",
+                    "arn:aws:iam::328392380408:user/catocher@externo.auna.pe",
+                    "arn:aws:iam::288056165677:user/arivasplata@auna.pe",
+                    "arn:aws:iam::328392380408:user/arodriguez@auna.pe",
+                    "arn:aws:iam::328392380408:user/lmedina@auna.pe",
+                    "arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+                    "arn:aws:iam::422633677643:user/bjaramillor@auna.pe",
+                    "arn:aws:iam::328392380408:user/sgallo@auna.pe",
+                    "arn:aws:iam::812159583496:user/aariza@auna.pe",
+                    "arn:aws:iam::471535047851:user/ksandovall@auna.pe"
+                ]
+            },
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-poblacion-oncosalud-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-poblacion-oncosalud-db/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::426045962075:user/jtovar@auna.pe",
+                    "arn:aws:iam::138849472586:user/jloli@auna.pe",
+                    "arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+                    "arn:aws:iam::138849472586:user/cjimenez@auna.pe"
+                ]
+            },
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-sap_insurance-modelo_sap_insurance-stage-db",
+                "arn:aws:glue:us-east-1:545740383705:database/auna_dl_staging_his510",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-cubofoundation",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-sap_insurance-modelo_sap_insurance-stage-db/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-cubofoundation/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna_dl_staging_his510/*",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-modama-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-modama-db/*",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-raw-datamart-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-raw-datamart-db/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::812159583496:user/gtavara@auna.pe",
+                    "arn:aws:iam::138849472586:user/jruizvi@auna.pe",
+                    "arn:aws:iam::328392380408:user/kaguilarp@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/rguarnizo@auna.pe",
+                    "arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+                    "arn:aws:iam::166327684175:user/pportilla@auna.pe",
+                    "arn:aws:iam::422633677643:user/arojash@auna.pe",
+                    "arn:aws:iam::422633677643:user/aalvino@auna.pe",
+                    "arn:aws:iam::422633677643:user/jvasquez@oncosalud.pe",
+                    "arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+                    "arn:aws:iam::166327684175:user/ncampos@auna.pe",
+                    "arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+                    "arn:aws:iam::422633677643:root",
+                    "arn:aws:iam::812159583496:user/rgallardod@auna.pe",
+                    "arn:aws:iam::422633677643:user/ctorero@auna.pe",
+                    "arn:aws:iam::812159583496:user/vmejia@auna.pe",
+                    "arn:aws:iam::422633677643:user/amerinol@auna.pe",
+                    "arn:aws:iam::422633677643:user/pchunga@auna.pe",
+                    "arn:aws:iam::812159583496:user/acasusol@auna.pe",
+                    "arn:aws:iam::422633677643:user/joel.villegas@zat.pe",
+                    "arn:aws:iam::138849472586:user/econdoricc@auna.pe",
+                    "arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+                    "arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+                    "arn:aws:iam::422633677643:user/jvicente@auna.pe",
+                    "arn:aws:iam::422633677643:user/bjaramillor@auna.pe",
+                    "arn:aws:iam::422633677643:user/cgarrom@auna.pe"
+                ]
+            },
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-sap_insurance-modelo_onconizado-stage-db",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-sap_insurance-modelo_sap_insurance-stage-db",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stage-datamart-db",
+                "arn:aws:glue:us-east-1:545740383705:database/auna_dl_staging_his510",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-cubofoundation",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-sap_insurance-modelo_onconizado-stage-db/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-sap_insurance-modelo_sap_insurance-stage-db/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-datamart-db/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-cubofoundation/*",
+                "arn:aws:glue:us-east-1:545740383705:database/auna_dl_staging_his510/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna_dl_staging_his510/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::328392380408:user/lmedina@auna.pe",
+                    "arn:aws:iam::138849472586:user/jruizvi@auna.pe",
+                    "arn:aws:iam::138849472586:user/econdoricc@auna.pe",
+                    "arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai",
+                    "arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/jloli@auna.pe",
+                    "arn:aws:iam::138849472586:user/lhuamanp@auna.pe",
+                    "arn:aws:iam::138849472586:user/crondan@auna.pe",
+                    "arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX"
+                ]
+            },
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-cubofoundation",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-cubofoundation/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::812159583496:user/gtavara@auna.pe",
+                    "arn:aws:iam::138849472586:user/jruizvi@auna.pe",
+                    "arn:aws:iam::138849472586:user/david.choqueluque@zat.pe",
+                    "arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+                    "arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+                    "arn:aws:iam::166327684175:user/pportilla@auna.pe",
+                    "arn:aws:iam::138849472586:user/lhuamanp@auna.pe",
+                    "arn:aws:iam::138849472586:user/juan.apaza@myevol.biz",
+                    "arn:aws:iam::422633677643:user/jvasquez@oncosalud.pe",
+                    "arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+                    "arn:aws:iam::166327684175:user/ncampos@auna.pe",
+                    "arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+                    "arn:aws:iam::138849472586:user/jloli@auna.pe",
+                    "arn:aws:iam::812159583496:user/rgallardod@auna.pe",
+                    "arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai",
+                    "arn:aws:iam::812159583496:user/vmejia@auna.pe",
+                    "arn:aws:iam::166327684175:user/gmondragon@tuxpas.com",
+                    "arn:aws:iam::812159583496:user/acasusol@auna.pe",
+                    "arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX",
+                    "arn:aws:iam::422633677643:user/joel.villegas@zat.pe",
+                    "arn:aws:iam::328392380408:user/lmedina@auna.pe",
+                    "arn:aws:iam::138849472586:user/econdoricc@auna.pe",
+                    "arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+                    "arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+                    "arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+                    "arn:aws:iam::422633677643:user/jvicente@auna.pe",
+                    "arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+                    "arn:aws:iam::812159583496:user/aariza@auna.pe",
+                    "arn:aws:iam::138849472586:user/kramosr@auna.pe"
+                ]
+            },
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-modama-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-modama-db/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::328392380408:user/dgrajeda@auna.pe",
+                    "arn:aws:iam::328392380408:user/bquispes@auna.pe",
+                    "arn:aws:iam::328392380408:user/lmurillo@auna.pe",
+                    "arn:aws:iam::328392380408:user/rbonifaz@auna.pe",
+                    "arn:aws:iam::328392380408:user/jllontop@auna.pe",
+                    "arn:aws:iam::328392380408:user/hescriba@auna.pe",
+                    "arn:aws:iam::328392380408:user/aahumada@auna.pe",
+                    "arn:aws:iam::328392380408:user/hsalcedo@auna.pe",
+                    "arn:aws:iam::328392380408:user/mllerenag@auna.pe",
+                    "arn:aws:iam::328392380408:user/jpuican@auna.pe",
+                    "arn:aws:iam::328392380408:user/xpena@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/vloureiro@auna.pe",
+                    "arn:aws:iam::328392380408:user/ojuarez@auna.pe",
+                    "arn:aws:iam::328392380408:user/jmartinezc@auna.pe",
+                    "arn:aws:iam::328392380408:user/btorres@auna.pe",
+                    "arn:aws:iam::328392380408:user/dserpa@auna.pe",
+                    "arn:aws:iam::328392380408:user/framirez@auna.pe",
+                    "arn:aws:iam::328392380408:user/ccatacora@auna.pe",
+                    "arn:aws:iam::328392380408:user/lrodriguez@auna.pe",
+                    "arn:aws:iam::328392380408:user/cegoavil@auna.pe",
+                    "arn:aws:iam::328392380408:user/catocher@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/arodriguez@auna.pe",
+                    "arn:aws:iam::328392380408:user/lmedina@auna.pe",
+                    "arn:aws:iam::328392380408:user/ecarrillo@auna.pe",
+                    "arn:aws:iam::328392380408:user/dkuriyama@auna.pe",
+                    "arn:aws:iam::328392380408:user/sgallo@auna.pe",
+                    "arn:aws:iam::328392380408:user/azapatav@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/lbolanos@auna.pe"
+                ]
+            },
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-sap_insurance-modelo_onconizado-stage-db",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-sap_insurance-modelo_sap_insurance-stage-db",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stage-datamart-db",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-modama-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-sap_insurance-modelo_onconizado-stage-db/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-sap_insurance-modelo_sap_insurance-stage-db/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-datamart-db/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-modama-db/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::328392380408:user/mreategui@zat.pe",
+                    "arn:aws:iam::328392380408:user/sandra.kana@zat.pe"
+                ]
+            },
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-sap_insurance-modelo_onconizado-stage-db",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-sap_insurance-modelo_sap_insurance-stage-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-sap_insurance-modelo_onconizado-stage-db/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-sap_insurance-modelo_sap_insurance-stage-db/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::328392380408:user/kaguilarp@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/larellanoc@auna.pe",
+                    "arn:aws:iam::328392380408:user/khinojosa@auna.pe",
+                    "arn:aws:iam::328392380408:user/rvargasl@auna.pe"
+                ]
+            },
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-sap_insurance-modelo_onconizado-stage-db",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stage-datamart-db",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-modama-db",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stage-modama-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-sap_insurance-modelo_onconizado-stage-db/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-datamart-db/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-modama-db/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-modama-db/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::138849472586:user/jruizvi@auna.pe",
+                    "arn:aws:iam::328392380408:user/kaguilarp@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/jllontop@auna.pe",
+                    "arn:aws:iam::328392380408:user/sandra.kana@zat.pe",
+                    "arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+                    "arn:aws:iam::328392380408:user/khinojosa@auna.pe",
+                    "arn:aws:iam::328392380408:user/aahumada@auna.pe",
+                    "arn:aws:iam::138849472586:user/lhuamanp@auna.pe",
+                    "arn:aws:iam::328392380408:user/mllerenag@auna.pe",
+                    "arn:aws:iam::288056165677:user/chidalgo@auna.pe",
+                    "arn:aws:iam::288056165677:user/mcaycho@auna.pe",
+                    "arn:aws:iam::328392380408:user/larellanoc@auna.pe",
+                    "arn:aws:iam::166327684175:user/ncampos@auna.pe",
+                    "arn:aws:iam::138849472586:user/jloli@auna.pe",
+                    "arn:aws:iam::647686659115:user/cavila@auna.pe",
+                    "arn:aws:iam::812159583496:user/rgallardod@auna.pe",
+                    "arn:aws:iam::288056165677:user/cchau@auna.pe",
+                    "arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai",
+                    "arn:aws:iam::328392380408:user/jmartinezc@auna.pe",
+                    "arn:aws:iam::812159583496:user/vmejia@auna.pe",
+                    "arn:aws:iam::166327684175:user/dmatos@tuxpas.com",
+                    "arn:aws:iam::328392380408:user/rvargasl@auna.pe",
+                    "arn:aws:iam::138849472586:user/econdoricc@auna.pe",
+                    "arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+                    "arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+                    "arn:aws:iam::422633677643:user/jvicente@auna.pe",
+                    "arn:aws:iam::426045962075:user/jtovar@auna.pe",
+                    "arn:aws:iam::328392380408:user/azapatav@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/lbolanos@auna.pe",
+                    "arn:aws:iam::812159583496:user/gtavara@auna.pe",
+                    "arn:aws:iam::328392380408:user/bquispes@auna.pe",
+                    "arn:aws:iam::328392380408:user/lmurillo@auna.pe",
+                    "arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+                    "arn:aws:iam::886026132689:user/cquezada@auna.pe",
+                    "arn:aws:iam::328392380408:user/hescriba@auna.pe",
+                    "arn:aws:iam::166327684175:user/pportilla@auna.pe",
+                    "arn:aws:iam::288056165677:user/jbauer@auna.pe",
+                    "arn:aws:iam::647686659115:user/alatorre@auna.pe",
+                    "arn:aws:iam::328392380408:user/mreategui@zat.pe",
+                    "arn:aws:iam::138849472586:user/cjimenez@auna.pe",
+                    "arn:aws:iam::422633677643:user/jvasquez@oncosalud.pe",
+                    "arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+                    "arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+                    "arn:aws:iam::166327684175:user/gmondragon@tuxpas.com",
+                    "arn:aws:iam::328392380408:user/rdelacruz@externo.auna.pe",
+                    "arn:aws:iam::812159583496:user/acasusol@auna.pe",
+                    "arn:aws:iam::328392380408:user/framirez@auna.pe",
+                    "arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX",
+                    "arn:aws:iam::328392380408:user/catocher@externo.auna.pe",
+                    "arn:aws:iam::288056165677:user/arivasplata@auna.pe",
+                    "arn:aws:iam::422633677643:user/joel.villegas@zat.pe",
+                    "arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+                    "arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+                    "arn:aws:iam::812159583496:user/aariza@auna.pe"
+                ]
+            },
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stor-olap-analytics-appauna-v1",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stor-olap-analytics-farmauna-v1",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stor-olap-analytics-appauna-v1/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stor-olap-analytics-farmauna-v1/*",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stor-olap-analytics-negociocomercial-v1",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stor-olap-analytics-negociocomercial-v1/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::138849472586:user/jruizvi@auna.pe",
+                    "arn:aws:iam::288056165677:user/cchau@auna.pe",
+                    "arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai",
+                    "arn:aws:iam::138849472586:user/david.choqueluque@zat.pe",
+                    "arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+                    "arn:aws:iam::328392380408:user/jmartinezc@auna.pe",
+                    "arn:aws:iam::288056165677:user/jbauer@auna.pe",
+                    "arn:aws:iam::138849472586:user/jespinozabad@auna.pe",
+                    "arn:aws:iam::138849472586:user/sosorio@auna.pe",
+                    "arn:aws:iam::138849472586:user/lhuamanp@auna.pe",
+                    "arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/juan.apaza@myevol.biz",
+                    "arn:aws:iam::288056165677:user/arivasplata@auna.pe",
+                    "arn:aws:iam::328392380408:user/mllerenag@auna.pe",
+                    "arn:aws:iam::138849472586:user/econdoricc@auna.pe",
+                    "arn:aws:iam::288056165677:user/chidalgo@auna.pe",
+                    "arn:aws:iam::288056165677:user/mcaycho@auna.pe",
+                    "arn:aws:iam::138849472586:user/cjimenez@auna.pe",
+                    "arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/jloli@auna.pe",
+                    "arn:aws:iam::138849472586:user/kramosr@auna.pe",
+                    "arn:aws:iam::138849472586:user/winy.mosqueda@zat.pe"
+                ]
+            },
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stage-poblacion-historica-oncosalud-db",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stage-hubspot-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-poblacion-historica-oncosalud-db/*",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-hubspot-db/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-cubofoundation",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-cubofoundation/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-cubofoundation": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna_dl_staging_his510",
+                "arn:aws:glue:us-east-1:545740383705:table/auna_dl_staging_his510/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna_dl_staging_his510": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::647686659115:user/cavila@auna.pe",
+                    "arn:aws:iam::647686659115:user/cjimenez@auna.pe",
+                    "arn:aws:iam::886026132689:user/cquezada@auna.pe",
+                    "arn:aws:iam::647686659115:user/jruiz@auna.pe",
+                    "arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+                    "arn:aws:iam::647686659115:user/fnopo@auna.pe",
+                    "arn:aws:iam::647686659115:user/alatorre@auna.pe",
+                    "arn:aws:iam::647686659115:user/Nicanor@GSPG_INTELIG"
+                ]
+            },
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stage-poblacion-historica-oncosalud-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-poblacion-historica-oncosalud-db/v_problacion_historica_activa",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-poblacion-historica-oncosalud-db/v_problacion_historica_bajas"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::647686659115:user/cavila@auna.pe",
+                    "arn:aws:iam::647686659115:user/cjimenez@auna.pe",
+                    "arn:aws:iam::647686659115:user/fnopo@auna.pe",
+                    "arn:aws:iam::647686659115:user/alatorre@auna.pe",
+                    "arn:aws:iam::647686659115:user/Nicanor@GSPG_INTELIG",
+                    "arn:aws:iam::647686659115:user/jruiz@auna.pe"
+                ]
+            },
+            "Action": [
+                "glue:GetTable",
+                "glue:GetPartitions"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stage-poblacion-historica-oncosalud-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-poblacion-historica-oncosalud-db/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": "arn:aws:glue:us-east-1:545740383705:catalog",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/glue-pe-auna-consolidado-bi-prd-catalog": "acceso"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-cubofoundation",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-cubofoundation/*",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-poblacion-oncosalud-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-poblacion-oncosalud-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-poblacion-oncosalud-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stage-hubspot-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-hubspot-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-stage-hubspot-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stage-poblacion-historica-oncosalud-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-poblacion-historica-oncosalud-db/*",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-s3-analytics-db-rep-gestion-cobranza",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-s3-analytics-db-rep-gestion-cobranza/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-s3-analytics-db-rep-gestion-cobranza": "todaslastablas",
+                    "aws:PrincipalTag/auna-dl-prd-stage-poblacion-historica-oncosalud-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stor-olap-analytics-farmauna-v1",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stor-olap-analytics-farmauna-v1/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-stor-olap-analytics-farmauna-v1": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stor-olap-analytics-appauna-v1",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stor-olap-analytics-appauna-v1/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-stor-olap-analytics-appauna-v1": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna_dl_staging_his510",
+                "arn:aws:glue:us-east-1:545740383705:table/auna_dl_staging_his510/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna_dl_staging_his510": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-modama-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-modama-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-modama-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna_dl_prd_lis",
+                "arn:aws:glue:us-east-1:545740383705:table/auna_dl_prd_lis/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna_dl_prd_lis": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-sap_r3-modelo_r3-stage-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-sap_r3-modelo_r3-stage-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-sap_r3-modelo_r3-stage-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna_dl_staging_files",
+                "arn:aws:glue:us-east-1:545740383705:table/auna_dl_staging_files/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna_dl_staging_files": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-s3-analytics-db-rep-negocio-prestacional",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-s3-analytics-db-rep-negocio-prestacional/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-glue-bi-prd-dl-prd": "DataLakeBIPRDRepNegPrestacional"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-sap_insurance-modelo_sap_insurance-stage-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-sap_insurance-modelo_sap_insurance-stage-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-glue-bi-prd-dl-InsuranceStageDb": "DataLakeBIPRDModeloSapInsuranceStage"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stage-datamart-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-datamart-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-glue-bi-prd-dl-StageDatamartDb": "DataLakeBIPRDStageDatamart"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-sac-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-sac-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-sac-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-variables-analiticas-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-variables-analiticas-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-variables-analiticas-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-variables-mercado-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-variables-mercado-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-variables-mercado-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dlaprd-baw-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dlaprd-baw-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dlaprd-baw-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-cubofoundation",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-cubofoundation/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-cubofoundation": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/sactuarial-validation-db",
+                "arn:aws:glue:us-east-1:545740383705:table/sactuarial-validation-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/sactuarial-validation-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-crm",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-crm/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-crm": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-sapcomisiones-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-sapcomisiones-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-sapcomisiones-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-s3-analytics-db-rep-negocio-prestacional/*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-s3-analytics-db-rep-negocio-prestacional": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-gest-cobranza-db/*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-gest-cobranza-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stor-olap-analytics-negociocomercial-v1/*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-stor-olap-analytics-negociocomercial-v1": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-poblacion-oncosalud-db",
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:table/aauna-dl-prd-analytics-poblacion-oncosalud-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-poblacion-oncosalud-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-s3-analytics-db-rep-negocio-prestacional",
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-s3-analytics-db-rep-negocio-prestacional/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-s3-analytics-db-rep-negocio-prestacional": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-variables-analiticas-db",
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-variables-analiticas-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-variables-analiticas-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::138849472586:user/crondan@auna.pe"
+            },
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-cubofoundation",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-cubofoundation/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna_dl_prd_stage_lis",
+                "arn:aws:glue:us-east-1:545740383705:table/auna_dl_prd_stage_lis/*",
+                "arn:aws:glue:us-east-1:545740383705:catalog"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna_dl_prd_stage_lis": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "glue:Get*",
+                "glue:List*",
+                "glue:Query*",
+                "glue:Batch*",
+                "glue:Search*"
+            ],
+            "Resource": "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-modelo_poblaciones_data_quality-db",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-modelo_poblaciones_data_quality-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-sap_bw-stage-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-sap_bw-stage-db/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-sap_bw-stage-db": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::521463962454:user/jcruzatt@auna.pe",
+                    "arn:aws:iam::521463962454:user/oavalos@auna.pe",
+                    "arn:aws:iam::521463962454:user/jespinozabad@auna.pe",
+                    "arn:aws:iam::521463962454:user/mwatanabe@auna.pe",
+                    "arn:aws:iam::521463962454:user/csaqui@auna.pe",
+                    "arn:aws:iam::521463962454:user/gtriveno@auna.pe"
+                ]
+            },
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-cubofoundation",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-cubofoundation/*",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-poblacion-oncosalud-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-poblacion-oncosalud-db/*",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-variables-analiticas-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-variables-analiticas-db/*",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-variables-mercado-db",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-variables-mercado-db/*",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-s3-analytics-db-rep-negocio-prestacional",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-s3-analytics-db-rep-negocio-prestacional/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-s3-analytics-db-gestion-salud",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-s3-analytics-db-gestion-salud/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-s3-analytics-db-gestion-salud": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-rep-gobierno-datos",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-rep-gobierno-datos/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-rep-gobierno-datos": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/*",
+                "arn:aws:glue:us-east-1:545740383705:table/*/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-s3-analytics": "todaslasbasesdedatos"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-cubo-ing-parciales",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-cubo-ing-parciales/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-analytics-cubo-ing-parciales": "todaslastablas"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "glue:*",
+            "Resource": [
+                "arn:aws:glue:us-east-1:545740383705:catalog",
+                "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-s3-analytics-db-matrizpago",
+                "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-s3-analytics-db-matrizpago/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/auna-dl-prd-s3-analytics-db-matrizpago": "todaslastablas"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "cloudfront:UpdateDistribution",
+                "cloudfront:DeleteDistribution",
+                "cloudfront:CreateInvalidation"
+            ],
+            "Resource": "arn:aws:cloudfront::<account_id>:distribution/<distribution_id>"
+        }
+    ]
+}
+
+{
+    "Version": "2012-10-17",
+    "Statement":[
+       {
+          "Effect":"Allow",
+          "Action":[
+             "acm:ListCertificates", 
+             "cloudfront:*", 
+             "cloudwatch:DescribeAlarms",
+             "cloudwatch:PutMetricAlarm",
+             "cloudwatch:GetMetricStatistics",
+             "elasticloadbalancing:DescribeLoadBalancers",
+             "iam:ListServerCertificates",
+             "sns:ListSubscriptionsByTopic",
+             "sns:ListTopics",
+             "waf:GetWebACL",
+             "waf:ListWebACLs"
+         ],
+         "Resource":"*"
+      }
+   ]
+}

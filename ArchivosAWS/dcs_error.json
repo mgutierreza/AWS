@@ -1,0 +1,35 @@
+{
+    "Effect": "Allow",
+    "Principal": "*",
+    "Action": "glue:*",
+    "Resource": [
+        "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stage-poblacion-historica-oncosalud-db",
+        "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stage-poblacion-historica-oncosalud-db/*",
+        "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-s3-analytics-db-rep-gestion-cobranza",
+        "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-s3-analytics-db-rep-gestion-cobranza/*"
+    ],
+    "Condition": {
+        "StringEquals": {
+            "aws:PrincipalTag/auna-dl-prd-stage-poblacion-historica-oncosalud-db": "todaslastablas",
+            "aws:PrincipalTag/auna-dl-prd-s3-analytics-db-rep-gestion-cobranza": "todaslastablas"
+        }
+    }
+},
+{
+    "Effect": "Allow",
+    "Principal": {
+        "AWS": "arn:aws:iam::138849472586:user/crondan@auna.pe"
+    },
+    "Action": [
+        "glue:Get*",
+        "glue:List*",
+        "glue:Query*",
+        "glue:Batch*",
+        "glue:Search*"
+    ],
+    "Resource": [
+        "arn:aws:glue:us-east-1:545740383705:catalog",
+        "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-analytics-cubofoundation",
+        "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-analytics-cubofoundation/*"
+    ]
+},

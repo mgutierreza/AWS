@@ -1,0 +1,31 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+            "Sid": "GrantAllActionsInAllSubnets",
+            "Action": [
+                "ec2:CreateInstanceConnectEndpoint",
+                "ec2:DeleteInstanceConnectEndpoint",
+                "ec2:CreateNetworkInterface",
+                "ec2:CreateTags",
+                "iam:CreateServiceLinkedRole"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:ec2:region:account-id:subnet/*"
+        },
+        {
+            "Action": [
+                "ec2:CreateNetworkInterface"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:ec2:::security-group/*"
+        },
+        {
+            "Sid": "DescribeInstanceConnectEndpoints",
+            "Action": [
+                "ec2:DescribeInstanceConnectEndpoints"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}

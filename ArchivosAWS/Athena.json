@@ -1,0 +1,685 @@
+{
+    "Version": "2012-10-17",
+    "Id": "MyPolicyID",
+    "Statement": [
+        {
+            "Sid": "CrossAccountAuna",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::422633677643:user/jvicente@auna.pe",
+                    "arn:aws:iam::328392380408:root",
+                    "arn:aws:iam::647686659115:root",
+                    "arn:aws:iam::521463962454:user/mwatanabe@auna.pe",
+                    "arn:aws:iam::105038922897:user/lchuquitaipe@auna.pe",
+                    "arn:aws:iam::426045962075:user/wprudencio@auna.pe",
+                    "arn:aws:iam::138849472586:user/ancel.vasquez@zat.pe",
+                    "arn:aws:iam::138849472586:user/ruben.rojas@zat.pe",
+                    "arn:aws:iam::521463962454:user/jcruzatt@auna.pe",
+                    "arn:aws:iam::138849472586:user/test",
+                    "arn:aws:iam::521463962454:role/service-role/AWSGlueDataBrewServiceRole-auna-sbx",
+                    "arn:aws:iam::545740383705:role/auna-bi-prd-dl-stage-sap-bw-prd-role",
+                    "arn:aws:iam::926314748651:user/vcosta@auna.pe",
+                    "arn:aws:iam::521463962454:user/usuariodepruebaglue",
+                    "arn:aws:iam::850417564552:user/grojas@auna.pe",
+                    "arn:aws:iam::138849472586:user/crondan@auna.pe",
+                    "arn:aws:iam::138849472586:user/fnopo@auna.pe",
+                    "arn:aws:iam::138849472586:user/lhuamanp@auna.pe",
+                    "arn:aws:iam::328392380408:user/mllerenag@auna.pe",
+                    "arn:aws:iam::328392380408:user/rguarnizo@auna.pe",
+                    "arn:aws:iam::850417564552:user/apadilla@auna.pe",
+                    "arn:aws:iam::850417564552:user/kgalvan@auna.pe",
+                    "arn:aws:iam::105038922897:user/lcoaquiraz@auna.pe",
+                    "arn:aws:iam::886026132689:user/vperezm@auna.pe",
+                    "arn:aws:iam::850417564552:root",
+                    "arn:aws:iam::368328335599:root",
+                    "arn:aws:iam::521463962454:user/csaqui@auna.pe",
+                    "arn:aws:iam::255366181314:root",
+                    "arn:aws:iam::384425546715:root",
+                    "arn:aws:iam::850417564552:user/jchanta@auna.pe",
+                    "arn:aws:iam::138849472586:user/renan.araujo@zat.pe",
+                    "arn:aws:iam::521463962454:user/oavalos@auna.pe",
+                    "arn:aws:iam::886026132689:user/mguevaraf@auna.pe",
+                    "arn:aws:iam::105038922897:user/smercado@auna.pe",
+                    "arn:aws:iam::422633677643:root",
+                    "arn:aws:iam::138849472586:user/jruizvi@auna.pe",
+                    "arn:aws:iam::138849472586:user/econdoricc@auna.pe",
+                    "arn:aws:iam::105038922897:role/service-role/AWSGlueDataBrewServiceRole-DatBrewq",
+                    "arn:aws:iam::138849472586:root",
+                    "arn:aws:iam::521463962454:user/gtriveno@auna.pe",
+                    "arn:aws:iam::850417564552:user/blegonia@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:Get*",
+                "s3:List*",
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-stage-s3",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/*"
+            ]
+        },
+        {
+            "Sid": "pe AUNA Gestion Salud SBX DownloadandUpload",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::166327684175:user/silvia.antayhua@tuxpas.com",
+                    "arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+                    "arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+                    "arn:aws:iam::166327684175:user/ncampos@auna.pe",
+                    "arn:aws:iam::166327684175:user/pportilla@auna.pe",
+                    "arn:aws:iam::886026132689:user/lpaytan@auna.pe",
+                    "arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+                    "arn:aws:iam::886026132689:user/cquezada@auna.pe",
+                    "arn:aws:iam::886026132689:user/gsalazar@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3/*"
+        },
+        {
+            "Sid": "pe AUNA Gestion Salud SBX ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::166327684175:user/silvia.antayhua@tuxpas.com",
+                    "arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+                    "arn:aws:iam::166327684175:user/atarazona@tuxpas.com",
+                    "arn:aws:iam::166327684175:user/ncampos@auna.pe",
+                    "arn:aws:iam::166327684175:user/pportilla@auna.pe",
+                    "arn:aws:iam::886026132689:user/lpaytan@auna.pe",
+                    "arn:aws:iam::166327684175:user/aulloa@tuxpas.com",
+                    "arn:aws:iam::886026132689:user/cquezada@auna.pe",
+                    "arn:aws:iam::886026132689:user/gsalazar@auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe AUNA Gerencia Dig SBX Download",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::800480532522:user/fmansilla@auna.pe",
+                    "arn:aws:iam::800480532522:user/rvalderrama@auna.pe",
+                    "arn:aws:iam::800480532522:user/mayulo@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3/*"
+        },
+        {
+            "Sid": "pe AUNA Gerencia Dig SBX ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::800480532522:user/fmansilla@auna.pe",
+                    "arn:aws:iam::800480532522:user/rvalderrama@auna.pe",
+                    "arn:aws:iam::800480532522:user/mayulo@auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe AUNA Gerencia Producto SBX Download",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+                    "arn:aws:iam::812159583496:user/vmejia@auna.pe",
+                    "arn:aws:iam::812159583496:user/mramirez@auna.pe",
+                    "arn:aws:iam::812159583496:user/acasusol@auna.pe",
+                    "arn:aws:iam::545740383705:role/auna-dl-prd-sap_insurance-modelo_sap_insurance-common-role",
+                    "arn:aws:iam::812159583496:user/gtavara@auna.pe",
+                    "arn:aws:iam::812159583496:user/rgallardod@auna.pe",
+                    "arn:aws:iam::812159583496:user/test",
+                    "arn:aws:iam::812159583496:user/aariza@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3/*"
+        },
+        {
+            "Sid": "pe AUNA Gerencia Producto SBX ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::812159583496:user/lfernandez@auna.pe",
+                    "arn:aws:iam::812159583496:user/vmejia@auna.pe",
+                    "arn:aws:iam::812159583496:user/mramirez@auna.pe",
+                    "arn:aws:iam::812159583496:user/acasusol@auna.pe",
+                    "arn:aws:iam::812159583496:user/gtavara@auna.pe",
+                    "arn:aws:iam::138849472586:user/fnopo@auna.pe",
+                    "arn:aws:iam::812159583496:user/rgallardod@auna.pe",
+                    "arn:aws:iam::812159583496:user/aariza@auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe AUNA Planeamiento Comercial SBX Download",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::328392380408:user/azapatav@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/khinojosa@auna.pe",
+                    "arn:aws:iam::328392380408:user/rvargasl@auna.pe",
+                    "arn:aws:iam::328392380408:user/rdelacruz@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/larellanoc@auna.pe",
+                    "arn:aws:iam::328392380408:user/catocher@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/hescriba@auna.pe",
+                    "arn:aws:iam::328392380408:user/jmartinezc@auna.pe",
+                    "arn:aws:iam::328392380408:user/pzunigac@auna.pe",
+                    "arn:aws:iam::328392380408:user/bquispes@auna.pe",
+                    "arn:aws:iam::328392380408:user/rguarnizo@auna.pe",
+                    "arn:aws:iam::328392380408:user/framirez@auna.pe",
+                    "arn:aws:iam::328392380408:user/aahumada@auna.pe",
+                    "arn:aws:iam::328392380408:user/mgutierrezcu@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/DataMart/AUNBIDTM/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SAPInsurance/ModeloOnconizado/*"
+            ]
+        },
+        {
+            "Sid": "pe AUNA Planeamiento Comercial SBX ListBucket 1",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::328392380408:user/azapatav@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/khinojosa@auna.pe",
+                    "arn:aws:iam::328392380408:user/rvargasl@auna.pe",
+                    "arn:aws:iam::328392380408:user/rdelacruz@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/larellanoc@auna.pe",
+                    "arn:aws:iam::328392380408:user/catocher@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/hescriba@auna.pe",
+                    "arn:aws:iam::328392380408:user/jmartinezc@auna.pe",
+                    "arn:aws:iam::328392380408:user/pzunigac@auna.pe",
+                    "arn:aws:iam::328392380408:user/bquispes@auna.pe",
+                    "arn:aws:iam::328392380408:user/rguarnizo@auna.pe",
+                    "arn:aws:iam::328392380408:user/framirez@auna.pe",
+                    "arn:aws:iam::328392380408:user/aahumada@auna.pe",
+                    "arn:aws:iam::328392380408:user/mgutierrezcu@auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe AUNA Planeamiento Comercial SBX Download R-039771",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::328392380408:user/pzunigac@auna.pe",
+                    "arn:aws:iam::328392380408:user/rguarnizo@auna.pe",
+                    "arn:aws:iam::328392380408:user/khinojosa@auna.pe",
+                    "arn:aws:iam::328392380408:user/rdelacruz@externo.auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/Modama/*"
+        },
+        {
+            "Sid": "pe AUNA Planeamiento Comercial SBX ListBucket R-039771",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::328392380408:user/pzunigac@auna.pe",
+                    "arn:aws:iam::328392380408:user/rguarnizo@auna.pe",
+                    "arn:aws:iam::328392380408:user/khinojosa@auna.pe",
+                    "arn:aws:iam::328392380408:user/rdelacruz@externo.auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe AUNA Gestion Medica Siniestros SBX Download",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+                    "arn:aws:iam::426045962075:user/jpachecoa@auna.pe",
+                    "arn:aws:iam::426045962075:user/jtovar@auna.pe",
+                    "arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+                    "arn:aws:iam::426045962075:user/oleong@auna.pe",
+                    "arn:aws:iam::426045962075:user/malorg@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SPRING/HHMM/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SAPInsurance/ModeloSAPInsurance/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLTP/HIS510/XHISPRD/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLTP/HIS510/XGPCPRD/*"
+            ]
+        },
+        {
+            "Sid": "pe AUNA Gestion Medica Siniestros SBX ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::426045962075:user/jpachecoa@auna.pe",
+                    "arn:aws:iam::426045962075:user/jtovar@auna.pe",
+                    "arn:aws:iam::426045962075:user/jcarhuallanqui@auna.pe",
+                    "arn:aws:iam::426045962075:user/oleong@auna.pe",
+                    "arn:aws:iam::426045962075:user/malorg@auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe AUNA BI SBX - Cubo Foundation Download",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/nnaccha@auna.pe",
+                    "arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SPRING/HHMM/*"
+        },
+        {
+            "Sid": "pe AUNA BI SBX - Cubo Foundation ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/nnaccha@auna.pe",
+                    "arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe AUNA Planeamiento Comercial 2 SBX Download",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::328392380408:user/jpuican@auna.pe",
+                    "arn:aws:iam::328392380408:user/xpena@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/sgallo@auna.pe",
+                    "arn:aws:iam::328392380408:user/rbonifaz@auna.pe",
+                    "arn:aws:iam::328392380408:user/lbolanos@auna.pe",
+                    "arn:aws:iam::328392380408:user/lmedina@auna.pe",
+                    "arn:aws:iam::328392380408:user/vloureiro@auna.pe",
+                    "arn:aws:iam::328392380408:user/lmurillo@auna.pe",
+                    "arn:aws:iam::328392380408:user/arodriguez@auna.pe",
+                    "arn:aws:iam::328392380408:user/dgrajeda@auna.pe",
+                    "arn:aws:iam::328392380408:user/cegoavil@auna.pe",
+                    "arn:aws:iam::328392380408:user/btorres@auna.pe",
+                    "arn:aws:iam::328392380408:user/lrodriguez@auna.pe",
+                    "arn:aws:iam::328392380408:user/hsalcedo@auna.pe",
+                    "arn:aws:iam::328392380408:user/jllontop@auna.pe",
+                    "arn:aws:iam::328392380408:user/ccatacora@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/DataMart/AUNBIDTM/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SAPInsurance/ModeloOnconizado/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SAPInsurance/ModeloSAPInsurance/*"
+            ]
+        },
+        {
+            "Sid": "pe AUNA Planeamiento Comercial 2 SBX ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::328392380408:user/jpuican@auna.pe",
+                    "arn:aws:iam::328392380408:user/xpena@externo.auna.pe",
+                    "arn:aws:iam::328392380408:user/sgallo@auna.pe",
+                    "arn:aws:iam::328392380408:user/rbonifaz@auna.pe",
+                    "arn:aws:iam::328392380408:user/lbolanos@auna.pe",
+                    "arn:aws:iam::328392380408:user/lmedina@auna.pe",
+                    "arn:aws:iam::328392380408:user/vloureiro@auna.pe",
+                    "arn:aws:iam::328392380408:user/lmurillo@auna.pe",
+                    "arn:aws:iam::328392380408:user/arodriguez@auna.pe",
+                    "arn:aws:iam::328392380408:user/dgrajeda@auna.pe",
+                    "arn:aws:iam::328392380408:user/cegoavil@auna.pe",
+                    "arn:aws:iam::328392380408:user/btorres@auna.pe",
+                    "arn:aws:iam::328392380408:user/lrodriguez@auna.pe",
+                    "arn:aws:iam::328392380408:user/hsalcedo@auna.pe",
+                    "arn:aws:iam::328392380408:user/jllontop@auna.pe",
+                    "arn:aws:iam::328392380408:user/ccatacora@auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe AUNA Planeamiento Comercial 3 SBX Download",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::886026132689:user/ejauregui@auna.pe",
+                    "arn:aws:iam::886026132689:user/cquezada@auna.pe",
+                    "arn:aws:iam::886026132689:user/lpaytan@auna.pe",
+                    "arn:aws:iam::886026132689:user/gsalazar@auna.pe",
+                    "arn:aws:iam::328392380408:user/mreategui@zat.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SAPInsurance/ModeloOnconizado/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SAPInsurance/ModeloSAPInsurance/*"
+            ]
+        },
+        {
+            "Sid": "pe AUNA Planeamiento Comercial 4 SBX Download",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::328392380408:user/odelaguila@zat.pe"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SAPInsurance/ModeloOnconizado/*"
+        },
+        {
+            "Sid": "pe AUNA Planeamiento Comercial 3 SBX ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::328392380408:user/odelaguila@zat.pe",
+                    "arn:aws:iam::328392380408:user/mreategui@zat.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe AUNA GSPG Intelig Comer SBX Download",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::647686659115:user/alatorre@auna.pe",
+                    "arn:aws:iam::647686659115:user/cavila@auna.pe",
+                    "arn:aws:iam::328392380408:user/lmedina@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/DataMart/AUNBIDTM/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SAPInsurance/ModeloOnconizado/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SAPInsurance/ModeloSAPInsurance/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/InteligenciaComercial/segmento/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/InteligenciaComercial/master_segmento/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLTP/SICAD/SCA_CONSENTIMIENTO/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/files/ODIN/costos_fijos/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/Modama/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SAR/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLTP/HIS510/XGPCPRD/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLTP/HIS510/XHISPRD/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/DataMart/stage-control/*"
+            ]
+        },
+        {
+            "Sid": "pe AUNA GSPG Intelig Comer SBX ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::647686659115:user/alatorre@auna.pe",
+                    "arn:aws:iam::647686659115:user/cavila@auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe AUNA BI-Sandbox R-042852",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/nnaccha@auna.pe",
+                    "arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai",
+                    "arn:aws:iam::138849472586:user/sosorio@auna.pe",
+                    "arn:aws:iam::138849472586:user/winy.mosqueda@zat.pe",
+                    "arn:aws:iam::138849472586:user/kramosr@auna.pe",
+                    "arn:aws:iam::138849472586:user/david.choqueluque@zat.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/API/HubSpot/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/poblacion-historica-oncosalud/*"
+            ]
+        },
+        {
+            "Sid": "pe AUNA BI-Sandbox R-043500",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::138849472586:user/sosorio@auna.pe"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SAPInsurance/ModeloOnconizado/*"
+        },
+        {
+            "Sid": "pe AUNA BI-Sandbox R-042852 ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::138849472586:user/Paolo_Morales@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/Roberto_Ancajima@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/Jhon_Basilio@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/nnaccha@auna.pe",
+                    "arn:aws:iam::138849472586:user/Francisco_Zevallos@BI-SANDBOX",
+                    "arn:aws:iam::138849472586:user/dvicente@neoconsulting.ai",
+                    "arn:aws:iam::138849472586:user/sosorio@auna.pe",
+                    "arn:aws:iam::138849472586:user/winy.mosqueda@zat.pe",
+                    "arn:aws:iam::138849472586:user/kramosr@auna.pe",
+                    "arn:aws:iam::138849472586:user/david.choqueluque@zat.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe auna people analitycs sbx R-043064 ListBucket 1",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::867017134770:user/jenriquez@auna.pe",
+                    "arn:aws:iam::867017134770:user/mhuane@auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe auna people analitycs sbx R-043064 ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::867017134770:user/jenriquez@auna.pe",
+                    "arn:aws:iam::867017134770:user/mhuane@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3/*"
+        },
+        {
+            "Sid": "pe AUNA BI-Sandbox R-043138",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::647686659115:user/fnopo@auna.pe",
+                    "arn:aws:iam::647686659115:user/cjimenez@auna.pe",
+                    "arn:aws:iam::647686659115:user/cavila@auna.pe",
+                    "arn:aws:iam::647686659115:user/jruiz@auna.pe",
+                    "arn:aws:iam::647686659115:user/test",
+                    "arn:aws:iam::647686659115:user/Nicanor@GSPG_INTELIG",
+                    "arn:aws:iam::647686659115:user/alatorre@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/poblacion-historica-oncosalud/*"
+        },
+        {
+            "Sid": "pe AUNA R-043138 ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::647686659115:user/fnopo@auna.pe",
+                    "arn:aws:iam::647686659115:user/cjimenez@auna.pe",
+                    "arn:aws:iam::647686659115:user/cavila@auna.pe",
+                    "arn:aws:iam::647686659115:user/jruiz@auna.pe",
+                    "arn:aws:iam::647686659115:user/test",
+                    "arn:aws:iam::647686659115:user/Nicanor@GSPG_INTELIG",
+                    "arn:aws:iam::647686659115:user/alatorre@auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe auna gestion clientes sbx R-044003 View",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::288056165677:user/jbauer@auna.pe",
+                    "arn:aws:iam::288056165677:user/sneira@auna.pe",
+                    "arn:aws:iam::288056165677:user/mcaycho@auna.pe",
+                    "arn:aws:iam::288056165677:user/arivasplata@auna.pe",
+                    "arn:aws:iam::288056165677:user/cchau@auna.pe",
+                    "arn:aws:iam::288056165677:user/chidalgo@auna.pe",
+                    "arn:aws:iam::288056165677:user/nchumacero@auna.pe"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SPRING/HHMM/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/API/HubSpot/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/poblacion-historica-oncosalud/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLTP/HIS510/XGPCPRD/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLTP/HIS510/XHISPRD/*"
+            ]
+        },
+        {
+            "Sid": "pe auna gestion clientes sbx R-044003 ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::288056165677:user/jbauer@auna.pe",
+                    "arn:aws:iam::288056165677:user/sneira@auna.pe",
+                    "arn:aws:iam::288056165677:user/mcaycho@auna.pe",
+                    "arn:aws:iam::288056165677:user/arivasplata@auna.pe",
+                    "arn:aws:iam::288056165677:user/cchau@auna.pe",
+                    "arn:aws:iam::288056165677:user/chidalgo@auna.pe",
+                    "arn:aws:iam::288056165677:user/nchumacero@auna.pe"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::auna-dlaprd-stage-s3"
+        },
+        {
+            "Sid": "pe AUNA actuarial tec SBX DownloadandUpload",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::426045962075:user/wprudencio@auna.pe",
+                    "arn:aws:iam::422633677643:root"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-stage-s3",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/*"
+            ]
+        },
+        {
+            "Sid": "pe AUNA gerencia comercial prestacional acceso athena",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::521463962454:user/jcruzatt@auna.pe",
+                    "arn:aws:iam::521463962454:user/test",
+                    "arn:aws:iam::521463962454:user/oavalos@auna.pe",
+                    "arn:aws:iam::521463962454:user/csaqui@auna.pe",
+                    "arn:aws:iam::521463962454:user/gtriveno@auna.pe",
+                    "arn:aws:iam::521463962454:user/mwatanabe@auna.pe"
+                ]
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::auna-dlaprd-stage-s3",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/files/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLTP/HIS510/XGPCPRD/*",
+                "arn:aws:s3:::auna-dlaprd-stage-s3/structured-data/OLAP/SAP/*"
+            ]
+        }
+    ]
+}
