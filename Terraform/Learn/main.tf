@@ -1,3 +1,7 @@
+provider "aws" {
+  region  = var.region
+}
+
 terraform {
   required_providers {
     aws = {
@@ -5,17 +9,13 @@ terraform {
       version = "~> 4.16"
     }
   }
-
   required_version = ">= 1.2.0"
-}
-
-provider "aws" {
-  region  = "us-east-1"
 }
 
 resource "aws_instance" "app_server" {
   ami           = "ami-0b2f2c807bbae79a6"
   instance_type = "t2.micro"
+  key_name      = "test-mga"
   
   network_interface {
     network_interface_id = "eni-080b9107f5c7925c2" 
