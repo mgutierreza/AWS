@@ -1,3 +1,5 @@
+#Crear una Instancia EC2 en AWS
+
 provider "aws" {
   region  = var.region
 }
