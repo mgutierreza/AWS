@@ -1,0 +1,27 @@
+{
+    "Effect": "Allow",
+    "Principal": {
+        "AWS" : [
+            "arn:aws:iam::138849472586:user/aahumada@auna.pe",
+            "arn:aws:iam::328392380408:user/mgutierrezcu@auna.pe"
+        ]
+    },
+    "Action": [
+        "glue:Get*",
+        "glue:List*",
+        "glue:Query*",
+        "glue:Batch*",
+        "glue:Search*"
+    ],
+    "Resource": [
+        "arn:aws:glue:us-east-1:545740383705:catalog",
+        "arn:aws:glue:us-east-1:545740383705:database/auna-dl-prd-stor-olap-analytics-mkfintermedio-v1",
+        "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stor-olap-analytics-mkfintermedio-v1/mkf_cobranza_morosos",
+        "arn:aws:glue:us-east-1:545740383705:table/auna-dl-prd-stor-olap-analytics-mkfintermedio-v1/mkf_oncosalud"
+    ],
+    "Condition": {
+        "StringEquals": {
+            "aws:PrincipalTag/auna-dl-prd-stor-olap-analytics-mkfintermedio-v1": "todaslastablas"
+        }
+    }
+}
