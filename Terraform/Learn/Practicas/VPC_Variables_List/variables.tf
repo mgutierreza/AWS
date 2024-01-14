@@ -4,6 +4,11 @@ variable "Virginia_cidr" {
     sensitive = false
 }
 
+variable "subnets" {
+    description = "Lista de Subnets"
+    type = list(string)
+}
+
 variable "map_tags_vpc_virginia_01" {
     default = {
         "Name" = "VPC-Virgina-01"
@@ -15,15 +20,6 @@ variable "map_tags_vpc_virginia_01" {
     type = map(string)
 }
 
-variable "public_subnet" {
-    description = "CIDR Public Subnet"
-    type = string
-}
-
-variable "private_subnet" {
-    description = "CIDR Private Subnet"
-    type = string
-}
 
 variable "map_tags_subnet_virginia_01" {
     default = {
