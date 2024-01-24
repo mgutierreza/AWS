@@ -8,3 +8,9 @@ tags = {
   "IAC"         = "Terraform"
   "Responsable" = "MGA"
 }
+
+ec2_parametros = {
+  "ami" = "ami-0a749d160bf052e89"
+  "instance_type" = "t2.micro"
+  "key_name" = "test-mga"
+}

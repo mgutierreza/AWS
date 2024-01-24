@@ -19,3 +19,7 @@ variable "private_subnet" {
   type        = string
 }
 
+variable "ec2_parametros" {
+  description = "Parémetros de la instancia"
+  type        = map(string)
+}
