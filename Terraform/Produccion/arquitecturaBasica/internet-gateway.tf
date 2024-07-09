@@ -1,8 +1,5 @@
 resource "aws_internet_gateway" "igw-terraform-onezone" {
     vpc_id =  aws_vpc.VPC-terraform-onezone.id
-    tags = {
-      Name = "igw-VPC-terraform-onezone"
-    }
 }
 
 resource "aws_route_table" "route_table_principal" {
@@ -13,9 +10,6 @@ resource "aws_route_table" "route_table_principal" {
     gateway_id = aws_internet_gateway.igw-terraform-onezone.id
   }
   
-  tags = {
-    "Name" = "Public Route Table"
-  }
 }
 
 resource "aws_route_table_association" "route_table_public_subnet" {

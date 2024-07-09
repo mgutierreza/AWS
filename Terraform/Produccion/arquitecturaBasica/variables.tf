@@ -4,6 +4,13 @@ variable "vpc_01_cird" {
   sensitive   = false
 }
 
+variable "aws_region" {
+  description = "Region"
+  type        = string
+  sensitive   = false
+  default = "us-east-1"
+}
+
 variable "tags" {
   description = "Tags generales de los servicios"
   type        = map(string)
@@ -29,3 +36,8 @@ variable "AZ_01"{
   type = string
 }
 
+variable "profile" {
+  description = "Tags generales de los servicios"
+  type        = string
+  default = "itera-test"
+}
