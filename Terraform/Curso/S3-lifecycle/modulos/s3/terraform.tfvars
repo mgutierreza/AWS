@@ -1,7 +1,3 @@
-aws_region          = "us-east-1"
-bucket_name         = "almacen-privado-backups"
-block_public_access = false
-
 tags = {
   "Ambiente"    = "PRD"
   "Nube"        = "AWS"
