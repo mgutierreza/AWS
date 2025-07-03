@@ -13,4 +13,8 @@ provider "aws" {
   region                   = var.aws_region
   shared_credentials_files = ["~/.aws/credentials"]
   profile                  = "default" # Usa el perfil "default" que configuraste
+
+  default_tags{
+    tags = var.tags
+  }
 }
