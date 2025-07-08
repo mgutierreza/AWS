@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"subnet","Source":"./modulos/subnet","Dir":"modulos/subnet"},{"Key":"subnets","Source":"./modulos/subnet","Dir":"modulos/subnet"},{"Key":"vpc","Source":"./modulos/vpc","Dir":"modulos/vpc"},{"Key":"vpc_infra_network","Source":"./modulos/vpc","Dir":"modulos/vpc"}]}
