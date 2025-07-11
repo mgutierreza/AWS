@@ -20,14 +20,27 @@ variable "vpc_block_cidr" {
   type        = string
 }
 
-variable "public_subnets" {
-  description = "Mapa de subredes públicas"
+variable "public_subnets_block_cidr" {
+  description = "Mapa de subredes publicas"
   type        = map(map(string))
 }
 
-variable "private_subnets" {
+variable "private_subnets_block_cidr" {
   description = "Mapa de subredes privadas"
   type        = map(map(string))
 }
 
+/*
+variable "nacl_ingress_rules" {
+  description = "Reglas de entrada para el Network ACL"
+  type        = list(map(any))
+  default     = []
+}
 
+variable "nacl_egress_rules" {
+  description = "Reglas de salida para el Network ACL"
+  type        = list(map(any))
+  default     = []
+}
+
+*/

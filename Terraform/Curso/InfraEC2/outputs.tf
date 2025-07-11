@@ -1,11 +1,19 @@
-/*
 #Salida para VPC
 output "vpn_id" {
-    value = module.aws_vpc.vpc_id
+    value = module.vpc.vpc_id
 }
 
 output "vpc_cidr" {
-    value = module.aws_vpc.vpc_block_cidr
+    value = module.vpc.vpc_cidr
+}
+
+#Salida para Internet Gateway
+output "igw_id" {
+    value = module.internet_gateway.igw_id
+}
+
+output "igw_arn" {
+    value = module.internet_gateway.igw_arn
 }
 
 #Salida para subnets
@@ -17,4 +25,3 @@ output "private_subnet_ids" {
     value = module.subnet.private_subnet_ids
 }
 
-*/
