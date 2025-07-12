@@ -9,12 +9,18 @@ variable "vpc_id" {
   type        = string
 }
 
-variable "public_subnets" {
-  description = "Mapa de subredes públicas"
-  type        = map(map(string))
+variable "public_subnets_datos" {
+  description = "Datos de subredes públicas"
+    type      = map(object({
+                            cidr  = string
+                            az    = string
+                          }))
 }
 
-variable "private_subnets" {
-  description = "Mapa de subredes privadas"
-  type        = map(map(string))
+variable "private_subnets_datos" {
+  description = "Datos de subredes privadas"
+    type      = map(object({
+                            cidr  = string
+                            az    = string
+                          }))
 }

@@ -10,10 +10,10 @@ variable "rtb_id_private" {
 
 variable "pub_subnet_id" {
   description = "Identificadores de subredes públicas"
-  type        = map(map(string))
+  type        = list(string)
 }
 
 variable "pri_subnet_id" {
   description = "Identificadores de subredes privadas"
-  type        = map(map(string))
+  type        = list(string)
 }

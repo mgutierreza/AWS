@@ -1,4 +1,4 @@
-# Creación de la VPN
+# Creación de la VPC
 module "vpc" {
   source     = "./modulos/vpc"
   vpc_block_cidr   = var.vpc_block_cidr
@@ -24,10 +24,9 @@ module "internet_gateway" {
 # Creación de Subnets - Públicas y privadas
 module "subnet" {
   source         = "./modulos/subnet"
-  
-  vpc_id         = module.vpc.vpc_id
-  public_subnets = var.public_subnets_block_cidr
-  private_subnets = var.private_subnets_block_cidr
+  vpc_id                        = module.vpc.vpc_id
+  public_subnets_datos   = var.public_subnets_value
+  private_subnets_datos  = var.private_subnets_value
 }
 
 # Creación de Route Table y sus Asociaciones - Publico y Privado
@@ -41,32 +40,37 @@ module "routetable" {
   rtb_name_private = "rtb-proyecto_private"   
 }
 
-module "routetable_association_private" {
-  source = "./modulos/route_table_association/main_pri.tf"
-
-  for_each       = module.subnet.private_subnet_ids
-  rtb_id_private = module.routetable.rtb_id_private
-  pri_subnet_id = each.value
-}
-
-module "routetable_association_public" {
-  source = "./modulos/route_table_association/main_pub.tf"
-
-  for_each       = module.subnet.public_subnet_ids
+module "route_table_association" {
+  source = "./modulos/route_table_association"
+  
   rtb_id_public = module.routetable.rtb_id_public
-  pub_subnet_id = each.value
+  pub_subnet_id = module.subnet.public_subnet_ids
+
+  pri_subnet_id = module.subnet.private_subnet_ids
+  rtb_id_private = module.routetable.rtb_id_private
 }
-
-
-
 
 # Creación de ACL
-module "acl" {
-  source  = "./modulos/nacl"
+module "nacl" {
+  source           = "./modulos/nacl"
+  vpc_id           = module.vpc.vpc_id
+  public_subnet_ids  = module.subnet.public_subnet_ids
+  private_subnet_ids = module.subnet.private_subnet_ids
+  name_prefix      = "proyecto"
+  tags             = local.tags
 
-  vpc_id = module.vpc.vpc_id
+  # Reglas personalizadas (opcional, usa las defaults si no se especifican)
+  ingress_rules = [
+    {
+      rule_number = 100,
+      protocol    = "tcp",
+      action      = "allow",
+      cidr_block  = "0.0.0.0/0",
+      from_port   = 80,
+      to_port     = 80
+    },
+    # Agrega más reglas según necesites
+  ]
 }
-
-
 
 

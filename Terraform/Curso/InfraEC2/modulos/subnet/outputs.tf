@@ -1,11 +1,11 @@
 output "public_subnet_ids" {
-  description = "Mapa de nombres de subredes públicas con sus IDs"
-  value       = { for k, subnet in aws_subnet.public : k => subnet.id }
+  description = "Lista de subredes públicas con sus IDs"
+  value = [for subnet in aws_subnet.public : subnet.id]
 }
 
 output "private_subnet_ids" {
-  description = "Mapa de nombres de subredes privadas con sus IDs"
-  value       = { for k, subnet in aws_subnet.private : k => subnet.id }
+  description = "Lista de nombres de subredes privadas con sus IDs"
+  value = [for subnet in aws_subnet.private : subnet.id]
 }
 
 output "all_subnet_ids" {

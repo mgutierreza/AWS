@@ -1,5 +1,5 @@
 resource "aws_subnet" "public" {
-  for_each = var.public_subnets
+  for_each = var.public_subnets_datos
 
   vpc_id                  = var.vpc_id
   cidr_block              = each.value.cidr
@@ -13,7 +13,7 @@ resource "aws_subnet" "public" {
 }
 
 resource "aws_subnet" "private" {
-  for_each = var.private_subnets
+  for_each = var.private_subnets_datos
 
   vpc_id            = var.vpc_id
   cidr_block        = each.value.cidr

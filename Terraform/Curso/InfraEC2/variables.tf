@@ -20,14 +20,20 @@ variable "vpc_block_cidr" {
   type        = string
 }
 
-variable "public_subnets_block_cidr" {
+variable "public_subnets_value" {
   description = "Mapa de subredes publicas"
-  type        = map(map(string))
+    type      = map(object({
+                            cidr  = string
+                            az    = string
+                          }))
 }
 
-variable "private_subnets_block_cidr" {
+variable "private_subnets_value" {
   description = "Mapa de subredes privadas"
-  type        = map(map(string))
+    type      = map(object({
+                            cidr  = string
+                            az    = string
+                          }))
 }
 
 /*
