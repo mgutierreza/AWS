@@ -1,6 +1,6 @@
-variable "vpc_id" {
+variable "vpc_default_network_acl_id" {
   type        = string
-  description = "ID de la VPC"
+  description = "ID del NACL predeterminado de la VPC"
 }
 
 variable "public_subnet_ids" {
@@ -28,24 +28,6 @@ variable "ingress_rules" {
     from_port   = number
     to_port     = number
   }))
-  default = [
-    {
-      rule_number = 100
-      protocol    = "tcp"
-      action      = "allow"
-      cidr_block  = "0.0.0.0/0"
-      from_port   = 80
-      to_port     = 80
-    },
-    {
-      rule_number = 110
-      protocol    = "tcp"
-      action      = "allow"
-      cidr_block  = "0.0.0.0/0"
-      from_port   = 443
-      to_port     = 443
-    }
-  ]
 }
 
 variable "egress_rules" {
@@ -57,16 +39,6 @@ variable "egress_rules" {
     from_port   = number
     to_port     = number
   }))
-  default = [
-    {
-      rule_number = 100
-      protocol    = "-1" 
-      action      = "allow"
-      cidr_block  = "0.0.0.0/0"
-      from_port   = 0
-      to_port     = 0
-    }
-  ]
 }
 
 variable "tags" {

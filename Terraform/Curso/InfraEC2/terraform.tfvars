@@ -1,6 +1,6 @@
 #Valores para VPC
-vpc_name   = "vpc_proyecto_server"
-vpc_block_cidr   = "20.20.0.0/16"
+vpc_name       = "vpc_proyecto_server"
+vpc_block_cidr = "20.20.0.0/16"
 
 #Valores para subnets
 public_subnets_value = {
@@ -14,7 +14,7 @@ public_subnets_value = {
   }
 }
 
-private_subnets_value= {
+private_subnets_value = {
   "priv-subnet-1" = {
     cidr = "20.20.2.0/24",
     az   = "us-west-2a"
@@ -33,35 +33,33 @@ private_subnets_value= {
   }
 }
 
-/*
-#Valores para network ACL
-nacl_ingress_rules = [
+# Reglas para NACL
+ingress_rules = [
   {
-    rule_no    = 100
-    action     = "allow"
-    from_port  = 80
-    to_port    = 80
-    protocol   = "tcp"
-    cidr_block = "0.0.0.0/0"
+    rule_number = 100
+    protocol    = "tcp"
+    action      = "allow"
+    cidr_block  = "0.0.0.0/0"
+    from_port   = 80
+    to_port     = 80
   },
   {
-    rule_no    = 110
-    action     = "allow"
-    from_port  = 443
-    to_port    = 443
-    protocol   = "tcp"
-    cidr_block = "0.0.0.0/0"
+    rule_number = 110
+    protocol    = "tcp"
+    action      = "allow"
+    cidr_block  = "0.0.0.0/0"
+    from_port   = 443
+    to_port     = 443
   }
 ]
 
-nacl_egress_rules = [
+egress_rules = [
   {
-    rule_no    = 100
-    action     = "allow"
-    from_port  = 0
-    to_port    = 0
-    protocol   = "-1"
-    cidr_block = "0.0.0.0/0"
+    rule_number = 100
+    protocol    = "-1"
+    action      = "allow"
+    cidr_block  = "0.0.0.0/0"
+    from_port   = 0
+    to_port     = 0
   }
 ]
-*/

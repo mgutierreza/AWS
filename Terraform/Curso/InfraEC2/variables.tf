@@ -22,31 +22,38 @@ variable "vpc_block_cidr" {
 
 variable "public_subnets_value" {
   description = "Mapa de subredes publicas"
-    type      = map(object({
-                            cidr  = string
-                            az    = string
-                          }))
+  type = map(object({
+    cidr = string
+    az   = string
+  }))
 }
 
 variable "private_subnets_value" {
   description = "Mapa de subredes privadas"
-    type      = map(object({
-                            cidr  = string
-                            az    = string
-                          }))
+  type = map(object({
+    cidr = string
+    az   = string
+  }))
 }
 
-/*
-variable "nacl_ingress_rules" {
-  description = "Reglas de entrada para el Network ACL"
-  type        = list(map(any))
-  default     = []
+variable "ingress_rules" {
+  type = list(object({
+    rule_number = number
+    protocol    = string
+    action      = string
+    cidr_block  = string
+    from_port   = number
+    to_port     = number
+  }))
 }
 
-variable "nacl_egress_rules" {
-  description = "Reglas de salida para el Network ACL"
-  type        = list(map(any))
-  default     = []
+variable "egress_rules" {
+  type = list(object({
+    rule_number = number
+    protocol    = string
+    action      = string
+    cidr_block  = string
+    from_port   = number
+    to_port     = number
+  }))
 }
-
-*/
