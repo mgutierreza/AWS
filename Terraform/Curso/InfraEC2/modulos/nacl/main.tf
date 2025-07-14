@@ -31,30 +31,3 @@ resource "aws_default_network_acl" "default" {
     Name = "${var.name_prefix}-nacl"
   })
 }
-/*
-# Reglas de entrada (ingress)
-resource "aws_default_network_acl_rule" "ingress" {
-  count          = length(var.ingress_rules)
-
-  egress         = false
-  rule_number    = var.ingress_rules[count.index].rule_number
-  protocol       = var.ingress_rules[count.index].protocol
-  rule_action    = var.ingress_rules[count.index].action
-  cidr_block     = var.ingress_rules[count.index].cidr_block
-  from_port      = var.ingress_rules[count.index].from_port
-  to_port        = var.ingress_rules[count.index].to_port
-}
-
-# Reglas de salida (egress)
-resource "aws_default_network_acl_rule" "egress" {
-  count          = length(var.egress_rules)
-
-  egress         = true
-  rule_number    = var.egress_rules[count.index].rule_number
-  protocol       = var.egress_rules[count.index].protocol
-  rule_action    = var.egress_rules[count.index].action
-  cidr_block     = var.egress_rules[count.index].cidr_block
-  from_port      = var.egress_rules[count.index].from_port
-  to_port        = var.egress_rules[count.index].to_port
-}
-*/
