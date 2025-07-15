@@ -2,7 +2,7 @@
 vpc_name       = "vpc_proyecto_server"
 vpc_block_cidr = "20.20.0.0/16"
 
-#Valores para subnets
+#Valores para subnets públicas
 public_subnets_value = {
   "pub-subnet-1" = {
     cidr = "20.20.1.0/24",
@@ -14,6 +14,7 @@ public_subnets_value = {
   }
 }
 
+#Valores para subnets privadas
 private_subnets_value = {
   "priv-subnet-1" = {
     cidr = "20.20.2.0/24",

@@ -4,12 +4,6 @@ variable "aws_region" {
   default     = "us-west-2"
 }
 
-variable "tags" {
-  description = "Etiquetas generales de componente AWS"
-  type        = map(string)
-  default     = {}
-}
-
 variable "vpc_name" {
   description = "Nombre de la VPC"
   type        = string
@@ -56,4 +50,10 @@ variable "egress_rules" {
     from_port   = number
     to_port     = number
   }))
+}
+
+variable "tags" {
+  description = "Etiquetas generales de componente AWS"
+  type        = map(string)
+  default     = {}
 }
