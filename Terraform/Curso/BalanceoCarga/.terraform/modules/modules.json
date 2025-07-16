@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"alb","Source":"./modulos/alb","Dir":"modulos/alb"},{"Key":"ec2","Source":"./modulos/ec2","Dir":"modulos/ec2"},{"Key":"ec2-2","Source":"./modulos/ec2","Dir":"modulos/ec2"},{"Key":"sg","Source":"./modulos/securitygroup","Dir":"modulos/securitygroup"}]}
